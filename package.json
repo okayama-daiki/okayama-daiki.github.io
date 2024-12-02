@@ -26,7 +26,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "framer-motion": "^11.12.0",
-    "globals": "^15.12.0",
+    "globals": "^15.13.0",
     "postcss": "^8.4.49",
     "react-typed": "^2.0.12",
     "sass-embedded": "^1.81.0",
