@@ -1,5 +1,5 @@
 import { Sun, Moon } from "@geist-ui/icons";
-
+import { useTranslation } from "react-i18next";
 import { ThemeType } from "../../types";
 import styles from "./Footer.module.scss";
 
@@ -9,6 +9,8 @@ interface FooterProps {
 }
 
 export default function Footer({ themeType, switchThemes }: FooterProps) {
+  const { i18n } = useTranslation();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.buttonContainer}>
@@ -24,12 +26,12 @@ export default function Footer({ themeType, switchThemes }: FooterProps) {
           )}
         </button>
         <button
-          onClick={() => {
-            alert("Sorry, but this feature is not implemented yet.");
-          }}
+          onClick={() =>
+            i18n.changeLanguage(i18n.language === "en" ? "ja" : "en")
+          }
           className={styles.switcher}
         >
-          <span style={{}}>EN</span>
+          <span>{i18n.language}</span>
         </button>
       </div>
       <small>&copy; {new Date().getFullYear()} Daiki Okayama</small>

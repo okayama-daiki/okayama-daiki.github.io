@@ -1,5 +1,6 @@
 import { Link, Divider, Spacer } from "@nextui-org/react";
 import { Mail } from "@geist-ui/icons";
+import { useTranslation } from "react-i18next";
 
 const SubSection = ({
   title,
@@ -19,11 +20,13 @@ const SubSection = ({
 };
 
 export default function MainPage() {
+  const { t } = useTranslation();
+
   return (
     <section className="my-10">
-      <SubSection title="Who am I?">
+      <SubSection title={t("whoAmI.title")}>
         <p className="mb-2">
-          I am a software engineer in Japan. Currently I am working for{" "}
+          {t("whoAmI.description")}{" "}
           <Link
             href="https://github.com/Dakken-LLC"
             className="text-blue-500 hover:underline"
@@ -31,77 +34,63 @@ export default function MainPage() {
           >
             Dakken LLC.
           </Link>
-          , a data analysis and software development company. I am also
-          attending{" "}
+          {t("whoAmI.company")}{" "}
           <Link
             href="https://www.u-hyogo.ac.jp/english/"
             className="text-blue-500 hover:underline"
             target="_blank"
           >
-            the University of Hyogo
+            {t("whoAmI.university.name")}
           </Link>
-          , majoring in online exploration algorithms. I will receive a BE in
-          March 2025 and will be admitted to{" "}
+          {t("whoAmI.university.details")}{" "}
           <Link
             href="https://u-hyogo.info/en/"
             className="text-blue-500 hover:underline"
             target="_blank"
           >
-            the Graduate School of Information Science, University of Hyogo
+            {t("whoAmI.university.graduateSchool.name")}
           </Link>
-          , in April.
+          {t("whoAmI.university.graduateSchool.details")}
         </p>
 
         <Spacer y={5} />
 
-        <p className="mb-2">I am interested in:</p>
+        <p className="mb-2">{t("whoAmI.interests.title")}</p>
         <ul className="list-disc ml-5 space-y-1">
-          <li>Specifications of programming languages</li>
-          <li>Programming paradigms and Design patterns</li>
+          <li>{t("whoAmI.interests.items.languages")}</li>
+          <li>{t("whoAmI.interests.items.designPatterns")}</li>
           <li>
             <s>
-              <b>Humor and comedy</b>
+              <b>{t("whoAmI.interests.items.humor")}</b>
             </s>
           </li>
         </ul>
       </SubSection>
 
-      <SubSection title="Software Development Projects">
-        <p className="mb-2">
-          I have been working on some software development projects. I mainly
-          use Python and TypeScript for development, and I am also interested in
-          Rust and Go.
-        </p>
+      <SubSection title={t("projects.title")}>
+        <p className="mb-2">{t("projects.description")}</p>
+        <ul className="list-disc ml-5 space-y-1">
+          <li>{t("projects.items.videoSystem")}</li>
+          <li>[WIP] {t("projects.items.selfCareApp")}</li>
+        </ul>
+      </SubSection>
+
+      <SubSection title={t("skills.title")}>
+        <p className="mb-2">{t("skills.description")}</p>
         <ul className="list-disc ml-5 space-y-1">
           <li>
-            Building a video on-demand system for <i>reskilling</i>
+            <b>{t("skills.items.git.name")}</b> -{" "}
+            {t("skills.items.git.description")}
           </li>
           <li>
-            [WIP] Building a self-care application co-produced with local
-            governments
+            <b>{t("skills.items.python.name")}</b> -{" "}
+            {t("skills.items.python.description")}
           </li>
         </ul>
       </SubSection>
 
-      <SubSection title="Skills">
-        <p className="mb-2">
-          I have experience in the following technologies and tools:
-        </p>
-        <ul className="list-disc ml-5 space-y-1">
-          <li>
-            <b>Git</b> - version control system
-          </li>
-          <li>
-            <b>Python</b> - programming language
-          </li>
-        </ul>
-      </SubSection>
-
-      <SubSection title="Works">
-        <p className="mb-2">
-          In private, I write articles and create software. Here are some of my
-          works:
-        </p>
+      <SubSection title={t("works.title")}>
+        <p className="mb-2">{t("works.description")}</p>
         <ul className="list-disc ml-5 space-y-1">
           <li>
             <Link
@@ -109,23 +98,23 @@ export default function MainPage() {
               className="text-blue-500 hover:underline"
               target="_blank"
             >
-              Snake Game - Online PvP Snake Game
+              {t("works.items.snakeGame")}
             </Link>
           </li>
           <li>
-            etc... See{" "}
+            {t("works.items.github.text")}{" "}
             <Link
               href="https://github.com/okayama-daiki"
               className="text-blue-500 hover:underline"
               target="_blank"
             >
-              my GitHub
+              {t("works.items.github.link")}
             </Link>
           </li>
         </ul>
       </SubSection>
 
-      <SubSection title="Link">
+      <SubSection title={t("links.title")}>
         <ul className="list-disc ml-5 space-y-1">
           <li>
             <Link
@@ -133,7 +122,7 @@ export default function MainPage() {
               className="text-blue-500 hover:underline"
               target="_blank"
             >
-              GitHub
+              {t("links.items.github")}
             </Link>
           </li>
           <li>
@@ -142,7 +131,7 @@ export default function MainPage() {
               className="text-blue-500 hover:underline"
               target="_blank"
             >
-              Stack Overflow (ja)
+              {t("links.items.stackoverflow")}
             </Link>
           </li>
           <li>
@@ -151,7 +140,7 @@ export default function MainPage() {
               className="text-blue-500 hover:underline"
               target="_blank"
             >
-              Zenn
+              {t("links.items.zenn")}
             </Link>
           </li>
           <li>
@@ -160,16 +149,14 @@ export default function MainPage() {
               className="text-blue-500 hover:underline"
               target="_blank"
             >
-              Qiita
+              {t("links.items.qiita")}
             </Link>
           </li>
         </ul>
       </SubSection>
 
-      <SubSection title="Contact">
-        <p className="mb-2">
-          If you have any questions or requests, please feel free to contact me.
-        </p>
+      <SubSection title={t("contact.title")}>
+        <p className="mb-2">{t("contact.description")}</p>
         <ul className="space-y-2">
           <li className="flex items-center space-x-2">
             <Link
@@ -177,7 +164,7 @@ export default function MainPage() {
               className="text-blue-500 hover:underline flex items-center gap-1"
             >
               <Mail size="16px" />
-              fa21k015[at]guh.u-hyogo.ac.jp
+              {t("contact.email")}
             </Link>
           </li>
         </ul>

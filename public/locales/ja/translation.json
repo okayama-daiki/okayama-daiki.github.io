@@ -1,0 +1,70 @@
+{
+  "whoAmI": {
+    "title": "自己紹介",
+    "description": "私は日本のソフトウェアエンジニアであり、現在は",
+    "company": "というデータ分析・ソフトウェア開発会社で働いています。また、",
+    "university": {
+      "name": "兵庫県立大学",
+      "details": "でオンライン探索アルゴリズムを専攻しています。2025 年 3 月に学士号を取得見込みで、4 月からは",
+      "graduateSchool": {
+        "name": "兵庫県立大学大学院 情報科学研究科",
+        "details": "に進学する予定です。"
+      }
+    },
+    "interests": {
+      "title": "興味のある分野:",
+      "items": {
+        "languages": "プログラミング言語の仕様",
+        "designPatterns": "プログラミングパラダイムとデザインパターン",
+        "humor": "ユーモアとコメディ"
+      }
+    }
+  },
+  "projects": {
+    "title": "ソフトウェア開発プロジェクト",
+    "description": "いくつかのソフトウェア開発プロジェクトに取り組んでいます。主に Python と TypeScript を使用しており、Rust や Go にも興味があります。",
+    "items": {
+      "videoSystem": "リスキリングのための動画配信システムの構築",
+      "selfCareApp": "地方自治体と共同でセルフケアアプリを開発中"
+    }
+  },
+  "skills": {
+    "title": "スキル",
+    "description": "以下の技術・ツールの経験があります:",
+    "items": {
+      "git": {
+        "name": "Git",
+        "description": "バージョン管理システム"
+      },
+      "python": {
+        "name": "Python",
+        "description": "プログラミング言語"
+      }
+    }
+  },
+  "works": {
+    "title": "制作物",
+    "description": "個人では記事の執筆やソフトウェアの制作を行っています。以下はその一部です:",
+    "items": {
+      "snakeGame": "スネークゲーム - オンライン対戦型スネークゲーム",
+      "github": {
+        "text": "その他... 詳細は",
+        "link": "私のGitHub"
+      }
+    }
+  },
+  "links": {
+    "title": "リンク",
+    "items": {
+      "github": "GitHub",
+      "stackoverflow": "Stack Overflow (日本語版)",
+      "zenn": "Zenn",
+      "qiita": "Qiita"
+    }
+  },
+  "contact": {
+    "title": "連絡先",
+    "description": "ご質問やご要望がございましたら、お気軽にお問い合わせください。",
+    "email": "fa21k015[at]guh.u-hyogo.ac.jp"
+  }
+}

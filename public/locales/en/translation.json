@@ -1,0 +1,70 @@
+{
+  "whoAmI": {
+    "title": "Who Am I?",
+    "description": "I am a software engineer in Japan. Currently I am working for",
+    "company": ", a data analysis and software development company. I am also attending",
+    "university": {
+      "name": "the University of Hyogo",
+      "details": ", majoring in online exploration algorithms. I will receive a BE in March 2025 and will be admitted to",
+      "graduateSchool": {
+        "name": "the Graduate School of Information Science, University of Hyogo",
+        "details": ", in April."
+      }
+    },
+    "interests": {
+      "title": "I am interested in:",
+      "items": {
+        "languages": "Specifications of programming languages",
+        "designPatterns": "Programming paradigms and Design patterns",
+        "humor": "Humor and comedy"
+      }
+    }
+  },
+  "projects": {
+    "title": "Software Development Projects",
+    "description": "I have been working on some software development projects. I mainly use Python and TypeScript for development, and I am also interested in Rust and Go.",
+    "items": {
+      "videoSystem": "Building a video on-demand system for reskilling",
+      "selfCareApp": "Building a self-care application co-produced with local governments"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "I have experience in the following technologies and tools:",
+    "items": {
+      "git": {
+        "name": "Git",
+        "description": "version control system"
+      },
+      "python": {
+        "name": "Python",
+        "description": "programming language"
+      }
+    }
+  },
+  "works": {
+    "title": "Works",
+    "description": "In private, I write articles and create software. Here are some of my works:",
+    "items": {
+      "snakeGame": "Snake Game - Online PvP Snake Game",
+      "github": {
+        "text": "etc... See",
+        "link": "my GitHub"
+      }
+    }
+  },
+  "links": {
+    "title": "Link",
+    "items": {
+      "github": "GitHub",
+      "stackoverflow": "Stack Overflow (ja)",
+      "zenn": "Zenn",
+      "qiita": "Qiita"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "If you have any questions or requests, please feel free to contact me.",
+    "email": "fa21k015[at]guh.u-hyogo.ac.jp"
+  }
+}
