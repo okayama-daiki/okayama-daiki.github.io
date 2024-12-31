@@ -8,7 +8,7 @@ import styles from "./App.module.scss";
 
 export default function App() {
   const [themeType, switchThemes] = useReducer(
-    (theme) => {
+    (theme: ThemeType) => {
       const nextTheme =
         theme === ThemeType.LIGHT ? ThemeType.DARK : ThemeType.LIGHT;
       localStorage.setItem("theme", nextTheme);

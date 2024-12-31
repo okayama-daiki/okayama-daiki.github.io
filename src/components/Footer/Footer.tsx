@@ -20,9 +20,9 @@ export default function Footer({ themeType, switchThemes }: FooterProps) {
           aria-label="Switch themes"
         >
           {themeType === ThemeType.LIGHT ? (
-            <Sun size="15px" />
+            <Sun size="15px" aria-label="Sun" role="img" />
           ) : (
-            <Moon size="15px" />
+            <Moon size="15px" aria-label="Moon" role="img" />
           )}
         </button>
         <button

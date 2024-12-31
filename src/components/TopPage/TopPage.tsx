@@ -31,7 +31,12 @@ export default function TopPage() {
         style={{ fontSize: "1.5em" }}
         className={styles.sacramento}
       />
-      <ChevronsDown className={styles.downIcon} onClick={scroll} />
+      <ChevronsDown
+        className={styles.downIcon}
+        onClick={scroll}
+        role="img"
+        aria-label="Down icon"
+      />
     </section>
   );
 }
