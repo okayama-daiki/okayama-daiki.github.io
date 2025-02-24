@@ -28,7 +28,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.20.0",
     "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.18",
+    "eslint-plugin-react-refresh": "^0.4.19",
     "framer-motion": "^12.4.7",
     "globals": "^15.15.0",
     "i18next": "^24.2.2",
