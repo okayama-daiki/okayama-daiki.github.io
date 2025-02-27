@@ -28,7 +28,7 @@ export default function MainPage() {
         <p className="mb-2">
           {t("whoAmI.description")}{" "}
           <Link
-            href="https://github.com/Dakken-LLC"
+            href="https://www.dakken.co.jp"
             className="text-blue-500 hover:underline"
             target="_blank"
           >
