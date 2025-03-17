@@ -46,7 +46,7 @@
     "vitest": "^3.0.7"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.35.0",
+    "@rollup/rollup-linux-x64-gnu": "4.36.0",
     "sass-embedded-linux-x64": "1.85.1"
   }
 }
