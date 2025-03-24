@@ -43,7 +43,7 @@
     "typescript": "~5.8.2",
     "typescript-eslint": "^8.27.0",
     "vite": "^6.2.2",
-    "vitest": "^3.0.7"
+    "vitest": "^3.0.9"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.36.0",
