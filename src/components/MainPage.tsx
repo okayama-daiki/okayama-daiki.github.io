@@ -1,4 +1,4 @@
-import { Link, Divider, Spacer } from "@nextui-org/react";
+import { Link, Divider, Spacer } from "@heroui/react";
 import { Mail } from "@geist-ui/icons";
 import { useTranslation } from "react-i18next";
 
