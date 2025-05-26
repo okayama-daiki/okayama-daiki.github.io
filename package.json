@@ -37,7 +37,7 @@
     "i18next-http-backend": "^3.0.2",
     "jsdom": "^26.1.0",
     "postcss": "^8.5.3",
-    "react-i18next": "^15.5.1",
+    "react-i18next": "^15.5.2",
     "react-typed": "^2.0.12",
     "sass-embedded": "^1.89.0",
     "tailwindcss": "^4.1.7",
