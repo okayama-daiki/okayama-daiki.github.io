@@ -39,7 +39,7 @@
     "postcss": "^8.5.4",
     "react-i18next": "^15.5.2",
     "react-typed": "^2.0.12",
-    "sass-embedded": "^1.89.0",
+    "sass-embedded": "^1.89.2",
     "tailwindcss": "^4.1.8",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.33.1",
