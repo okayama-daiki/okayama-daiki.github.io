@@ -122,7 +122,7 @@ export default function Content() {
         </Section>
 
         <Section title="What do I study?">
-          <Text>I am studing the online graph exploration. Following is a brief introduction.</Text>
+          <Text>I am studying the online graph exploration. Following is a brief introduction.</Text>
 
           <Blockquote.Root my="2">
             <Blockquote.Content>
