@@ -1,7 +1,8 @@
 import { Spacer } from "@chakra-ui/react";
 
+import Content from "@/components/Content";
 import Typing from "@/components/Typing";
-import Content from "./components/Content";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Typing />
       <Spacer height={8} />
       <Content />
+      <Toaster />
     </>
   );
 }

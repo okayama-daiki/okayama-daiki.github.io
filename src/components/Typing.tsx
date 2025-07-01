@@ -1,15 +1,15 @@
+import { Box, Icon, VStack } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
-import { LuChevronsDown } from "react-icons/lu";
 import Typed from "typed.js";
 
-import { Box, Icon, VStack } from "@chakra-ui/react";
 import "@fontsource/sacramento/index.css";
+import { LuChevronsDown } from "react-icons/lu";
 
 export default function Typing() {
   const spanRef = useRef<HTMLSpanElement>(null);
 
   const scrollDown = () => {
-    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -30,19 +30,14 @@ export default function Typing() {
   }, []);
 
   return (
-    <VStack
-      width="100vw"
-      height="100dvh"
-      justifyContent="center"
-      alignItems="center"
-    >
+    <VStack width="100vw" height="100dvh" justifyContent="center" alignItems="center">
       <Box fontFamily="sacramento">
         <span ref={spanRef} style={{ fontSize: "2.2rem" }} />
       </Box>
       <Icon
         size="xl"
         strokeWidth={1}
-        animation={"bounce 1s 4s ease-in-out infinite, fade-in 1s 4s forwards"}
+        animation="bounce 1s 4s ease-in-out infinite, fade-in 1s 4s forwards"
         opacity={0}
         onClick={scrollDown}
         cursor="pointer"
