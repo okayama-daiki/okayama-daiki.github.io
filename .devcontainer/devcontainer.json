@@ -1,0 +1,11 @@
+{
+  "name": "Bun Development Environment",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "postCreateCommand": "bun install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["biomejs.biome"]
+    }
+  }
+}
