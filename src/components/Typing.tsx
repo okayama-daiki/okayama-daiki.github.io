@@ -30,7 +30,7 @@ export default function Typing() {
   }, []);
 
   return (
-    <VStack width="100vw" height="100dvh" justifyContent="center" alignItems="center">
+    <VStack height="100dvh" justifyContent="center" alignItems="center">
       <Box fontFamily="sacramento">
         <span ref={spanRef} style={{ fontSize: "2.2rem" }} />
       </Box>
