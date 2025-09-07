@@ -1,0 +1,1 @@
+/*eslint-disable*/import type{Messages}from"@lingui/core";export const messages=JSON.parse("{\"YvWTMz\":[\"現在は、<0>兵庫県立大学大学院 情報科学研究科</0>に在籍しており、オンライン探索アルゴリズムを専攻しています。\"],\"gCXvBG\":[\"現在は、データ分析およびソフトウェア開発会社である<0>合同会社 DA 研</0>で勤務しています。\"],\"klcJkk\":[\"<0>兵庫県立大学</0>で社会情報科学の学士号を取得し、\"],\"m4pBP7\":[\"私は日本のソフトウェアエンジニアであり、\"]}")as Messages;
