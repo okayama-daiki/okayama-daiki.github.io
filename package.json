@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "biome lint --write src/",
     "format": "biome format --write src/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "extract": "lingui extract",
+    "compile": "lingui compile --typescript"
   },
   "dependencies": {
     "next-themes": "^0.4.6",
@@ -21,6 +23,10 @@
     "@chakra-ui/react": "^3.26.0",
     "@emotion/react": "^11.14.0",
     "@fontsource/sacramento": "^5.2.6",
+    "@lingui/core": "^5.4.1",
+    "@lingui/react": "^5.4.1",
+    "@lingui/swc-plugin": "^5.6.1",
+    "@lingui/vite-plugin": "^5.4.1",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react-swc": "^4.0.1",
