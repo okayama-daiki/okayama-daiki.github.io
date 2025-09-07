@@ -1,4 +1,5 @@
 import { Blockquote, Container, Link, List, Spacer, Stack, Text, Timeline } from "@chakra-ui/react";
+import { Trans } from "@lingui/react/macro";
 import { FaPersonFalling } from "react-icons/fa6";
 import { PiVideoDuotone } from "react-icons/pi";
 import { RiMentalHealthLine } from "react-icons/ri";
@@ -20,12 +21,22 @@ export default function Content() {
       <Stack>
         <Section title="Who Am I?">
           <Text>
-            I am a software engineer in Japan. Currently I am working for{" "}
-            <Link href="https://dakken.co.jp">Dakken LLC.</Link>, a data analysis and software development company. I am
-            also attending{" "}
-            <Link href="https://u-hyogo.info/en/">Graduate School of Information Science, University of Hyogo</Link>,
-            majoring in online exploration algorithms. I received my Bachelor's degree in Social Information Science
-            from <Link href="https://www.u-hyogo.ac.jp/english/">University of Hyogo</Link>.
+            <Trans>I am a software engineer in Japan. </Trans>
+            <Trans>
+              Currently I am working for <Link href="https://dakken.co.jp">Dakken LLC.</Link>, a data analysis and
+              software development company.
+            </Trans>
+            <Trans>
+              I received my Bachelor's degree in Social Information Science from{" "}
+              <Link href="https://www.u-hyogo.ac.jp/english/">University of Hyogo</Link>.
+            </Trans>
+            <Trans>
+              I am also attending{" "}
+              <Link href="https://u-hyogo-gsis.org/en/">
+                Graduate School of Information Science, University of Hyogo
+              </Link>
+              , majoring in online exploration algorithms.
+            </Trans>
           </Text>
 
           <Spacer height={4} />
