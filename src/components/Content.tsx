@@ -42,11 +42,13 @@ export default function Content() {
           <Spacer height={4} />
 
           <Text>
-            My dedicated CV is given{" "}
-            <Link href="javascript:void(0)" onClick={alertNotAvailable}>
-              here
-            </Link>
-            .
+            <Trans>
+              My dedicated CV is given{" "}
+              <Link href="javascript:void(0)" onClick={alertNotAvailable}>
+                here
+              </Link>
+              .
+            </Trans>
           </Text>
 
           <Spacer height={4} />

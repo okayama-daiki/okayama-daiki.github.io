@@ -13,18 +13,22 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/Content.tsx:25
+#: src/components/Content.tsx:35
 msgid "Currently I am working for <0>Dakken LLC.</0>, a data analysis and software development company."
 msgstr "現在は、データ分析およびソフトウェア開発会社である<0>合同会社 DA 研</0>で勤務しています。"
 
-#: src/components/Content.tsx:24
+#: src/components/Content.tsx:34
 msgid "I am a software engineer in Japan. "
 msgstr "私は日本のソフトウェアエンジニアであり、"
 
-#: src/components/Content.tsx:33
+#: src/components/Content.tsx:47
 msgid "I am also attending <0>Graduate School of Information Science, University of Hyogo</0>, majoring in online exploration algorithms."
 msgstr "現在は、<0>兵庫県立大学大学院 情報科学研究科</0>に在籍しており、オンライン探索アルゴリズムを専攻しています。"
 
-#: src/components/Content.tsx:29
+#: src/components/Content.tsx:40
 msgid "I received my Bachelor's degree in Social Information Science from <0>University of Hyogo</0>."
 msgstr "<0>兵庫県立大学</0>で社会情報科学の学士号を取得し、"
+
+#: src/components/Content.tsx:59
+msgid "My dedicated CV is given <0>here</0>."
+msgstr "詳細な職務経歴書は<0>ここ</0>から取得できます。"
