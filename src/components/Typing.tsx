@@ -8,15 +8,14 @@ import { getGreetingMessage, updateVisitorData } from "@/utils/visitor";
 
 export default function Typing() {
   const spanRef = useRef<HTMLSpanElement>(null);
-  const [greetingMessage] = useState(() => getGreetingMessage());
+  const [greetingMessage] = useState(() => {
+    updateVisitorData();
+    return getGreetingMessage();
+  });
 
   const scrollDown = () => {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
-
-  useEffect(() => {
-    updateVisitorData();
-  }, []);
 
   useEffect(() => {
     if (!spanRef.current) return;
