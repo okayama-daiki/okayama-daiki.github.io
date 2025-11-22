@@ -1,0 +1,82 @@
+interface VisitorData {
+  visitCount: number;
+  lastVisit: number; // timestamp
+}
+
+const STORAGE_KEY = "visitor_data";
+
+const FIRST_VISIT_MESSAGES = ["Hello, World!"];
+
+const RETURNING_MESSAGES = ["Welcome Back!", "Hello again!", "Good to see you!"];
+
+const LONG_TIME_MESSAGES = ["Nice to see you again!"];
+
+const LONG_TIME_THRESHOLD_DAYS = 30;
+const MILESTONE_VISIT_INTERVAL = 25;
+
+function getRandomMessage(messages: string[]): string {
+  return messages[Math.floor(Math.random() * messages.length)];
+}
+
+export function getVisitorData(): VisitorData {
+  try {
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (data) {
+      return JSON.parse(data);
+    }
+  } catch (error) {
+    console.error("Failed to get visitor data:", error);
+  }
+  return { visitCount: 0, lastVisit: 0 };
+}
+
+export function updateVisitorData(): VisitorData {
+  try {
+    const currentData = getVisitorData();
+    const now = Date.now();
+    const newData: VisitorData = {
+      visitCount: currentData.visitCount + 1,
+      lastVisit: now,
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newData));
+    return newData;
+  } catch (error) {
+    console.error("Failed to update visitor data:", error);
+    return getVisitorData();
+  }
+}
+
+export function getGreetingMessage(): string {
+  const data = getVisitorData();
+  return getGreetingMessageFromData(data, false);
+}
+
+export function updateAndGetGreetingMessage(): string {
+  const updatedData = updateVisitorData();
+  return getGreetingMessageFromData(updatedData, true);
+}
+
+function getGreetingMessageFromData(
+  data: VisitorData,
+  isUpdated: boolean,
+): string {
+  const now = Date.now();
+  const daysSinceLastVisit = (now - data.lastVisit) / (24 * 60 * 60 * 1000);
+
+  // For updated data, first visit has count=1; for non-updated data, it has count=0
+  const isFirstVisit = isUpdated ? data.visitCount === 1 : data.visitCount === 0;
+
+  if (isFirstVisit) {
+    return getRandomMessage(FIRST_VISIT_MESSAGES);
+  }
+
+  if (data.visitCount % MILESTONE_VISIT_INTERVAL === 0) {
+    return `Wow! This is your ${data.visitCount}th visit!`;
+  }
+
+  if (daysSinceLastVisit >= LONG_TIME_THRESHOLD_DAYS) {
+    return getRandomMessage(LONG_TIME_MESSAGES);
+  }
+
+  return getRandomMessage(RETURNING_MESSAGES);
+}
