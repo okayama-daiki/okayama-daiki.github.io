@@ -48,19 +48,25 @@ export function updateVisitorData(): VisitorData {
 
 export function getGreetingMessage(): string {
   const data = getVisitorData();
-  return getGreetingMessageFromData(data);
+  return getGreetingMessageFromData(data, false);
 }
 
 export function updateAndGetGreetingMessage(): string {
   const updatedData = updateVisitorData();
-  return getGreetingMessageFromData(updatedData);
+  return getGreetingMessageFromData(updatedData, true);
 }
 
-function getGreetingMessageFromData(data: VisitorData): string {
+function getGreetingMessageFromData(
+  data: VisitorData,
+  isUpdated: boolean,
+): string {
   const now = Date.now();
   const daysSinceLastVisit = (now - data.lastVisit) / (24 * 60 * 60 * 1000);
 
-  if (data.visitCount === 0) {
+  // For updated data, first visit has count=1; for non-updated data, it has count=0
+  const isFirstVisit = isUpdated ? data.visitCount === 1 : data.visitCount === 0;
+
+  if (isFirstVisit) {
     return getRandomMessage(FIRST_VISIT_MESSAGES);
   }
 
