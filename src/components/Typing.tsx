@@ -4,19 +4,15 @@ import Typed from "typed.js";
 
 import "@fontsource/sacramento/index.css";
 import { LuChevronsDown } from "react-icons/lu";
-import { getGreetingMessage, updateVisitorData } from "@/utils/visitor";
+import { updateAndGetGreetingMessage } from "@/utils/visitor";
 
 export default function Typing() {
   const spanRef = useRef<HTMLSpanElement>(null);
-  const [greetingMessage] = useState(() => getGreetingMessage());
+  const [greetingMessage] = useState(() => updateAndGetGreetingMessage());
 
   const scrollDown = () => {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
-
-  useEffect(() => {
-    updateVisitorData();
-  }, []);
 
   useEffect(() => {
     if (!spanRef.current) return;
