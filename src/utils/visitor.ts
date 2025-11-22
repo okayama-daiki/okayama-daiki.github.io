@@ -11,6 +11,8 @@ const RETURNING_MESSAGES = ["Welcome Back!", "Hello again!", "Good to see you!"]
 
 const LONG_TIME_MESSAGES = ["Nice to see you again!"];
 
+const MILESTONE_VISIT_INTERVAL = 25;
+
 function getRandomMessage(messages: string[]): string {
   return messages[Math.floor(Math.random() * messages.length)];
 }
@@ -50,7 +52,7 @@ export function getGreetingMessage(): string {
     return getRandomMessage(FIRST_VISIT_MESSAGES);
   }
 
-  if (data.visitCount % 25 === 0) {
+  if (data.visitCount % MILESTONE_VISIT_INTERVAL === 0) {
     return `Wow! This is your ${data.visitCount}th visit!`;
   }
 
