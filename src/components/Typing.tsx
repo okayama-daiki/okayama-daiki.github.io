@@ -8,18 +8,14 @@ import { updateAndGetGreetingMessage } from "@/utils/visitor";
 
 export default function Typing() {
   const spanRef = useRef<HTMLSpanElement>(null);
-  const [greetingMessage, setGreetingMessage] = useState("");
-
-  useEffect(() => {
-    setGreetingMessage(updateAndGetGreetingMessage());
-  }, []);
+  const [greetingMessage] = useState(() => updateAndGetGreetingMessage());
 
   const scrollDown = () => {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
 
   useEffect(() => {
-    if (!spanRef.current || !greetingMessage) return;
+    if (!spanRef.current) return;
 
     const typed = new Typed(spanRef.current, {
       strings: [greetingMessage, "I'm Daiki Okayama."],
