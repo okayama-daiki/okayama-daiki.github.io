@@ -30,7 +30,7 @@ export function getVisitorData(): VisitorData {
   return { visitCount: 0, lastVisit: 0 };
 }
 
-export function updateVisitorData(): void {
+export function updateVisitorData(): VisitorData {
   try {
     const currentData = getVisitorData();
     const now = Date.now();
@@ -39,13 +39,24 @@ export function updateVisitorData(): void {
       lastVisit: now,
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(newData));
+    return newData;
   } catch (error) {
     console.error("Failed to update visitor data:", error);
+    return getVisitorData();
   }
 }
 
 export function getGreetingMessage(): string {
   const data = getVisitorData();
+  return getGreetingMessageFromData(data);
+}
+
+export function updateAndGetGreetingMessage(): string {
+  const updatedData = updateVisitorData();
+  return getGreetingMessageFromData(updatedData);
+}
+
+function getGreetingMessageFromData(data: VisitorData): string {
   const now = Date.now();
   const daysSinceLastVisit = (now - data.lastVisit) / (24 * 60 * 60 * 1000);
 
