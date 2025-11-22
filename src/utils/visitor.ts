@@ -11,6 +11,7 @@ const RETURNING_MESSAGES = ["Welcome Back!", "Hello again!", "Good to see you!"]
 
 const LONG_TIME_MESSAGES = ["Nice to see you again!"];
 
+const LONG_TIME_THRESHOLD_DAYS = 30;
 const MILESTONE_VISIT_INTERVAL = 25;
 
 function getRandomMessage(messages: string[]): string {
@@ -56,7 +57,7 @@ export function getGreetingMessage(): string {
     return `Wow! This is your ${data.visitCount}th visit!`;
   }
 
-  if (daysSinceLastVisit >= 30) {
+  if (daysSinceLastVisit >= LONG_TIME_THRESHOLD_DAYS) {
     return getRandomMessage(LONG_TIME_MESSAGES);
   }
 
