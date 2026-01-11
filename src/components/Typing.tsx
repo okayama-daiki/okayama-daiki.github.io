@@ -1,4 +1,6 @@
 import { Box, Icon, VStack } from "@chakra-ui/react";
+import { defineMessage } from "@lingui/core/macro";
+import { useLingui } from "@lingui/react";
 import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 
@@ -6,9 +8,15 @@ import "@fontsource/sacramento/index.css";
 import { LuChevronsDown } from "react-icons/lu";
 import { updateAndGetGreetingMessage } from "@/utils/visitor";
 
+const NAME_MESSAGE = defineMessage({
+  id: "typing.name",
+  message: "I'm Daiki Okayama.",
+});
+
 export default function Typing() {
   const spanRef = useRef<HTMLSpanElement>(null);
   const [greetingMessage] = useState(() => updateAndGetGreetingMessage());
+  const { i18n } = useLingui();
 
   const scrollDown = () => {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
@@ -18,7 +26,7 @@ export default function Typing() {
     if (!spanRef.current) return;
 
     const typed = new Typed(spanRef.current, {
-      strings: [greetingMessage, "I'm Daiki Okayama."],
+      strings: [greetingMessage, i18n._(NAME_MESSAGE)],
       typeSpeed: 40,
       backSpeed: 50,
       onComplete: (self) => {
@@ -29,7 +37,7 @@ export default function Typing() {
     return () => {
       typed.destroy();
     };
-  }, [greetingMessage]);
+  }, [greetingMessage, i18n]);
 
   return (
     <VStack height="100dvh" justifyContent="center" alignItems="center">

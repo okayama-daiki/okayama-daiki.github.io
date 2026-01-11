@@ -13,22 +13,201 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/Content.tsx:35
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:28
+#~ msgid "visitor.returning.goodToSeeYou"
+#~ msgstr "お会いできてうれしいです！"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:24
+#~ msgid "visitor.returning.helloAgain"
+#~ msgstr "またお会いしましたね！"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:13
+#~ msgid "visitor.first.helloWorld"
+#~ msgstr "こんにちは、世界！"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:35
+#~ msgid "visitor.longTime.niceToSeeYouAgain"
+#~ msgstr "また会えてうれしいです！"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:20
+#~ msgid "visitor.returning.welcomeBack"
+#~ msgstr "おかえりなさい！"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:41
+#~ msgid "visitor.milestone.count"
+#~ msgstr "わぁ！これで{count}回目の訪問です！"
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx:21
+msgid "footer.copyright"
+msgstr "© {year} Daiki Okayama"
+
+#: src/components/Content.tsx:146
+msgid "Building an on-demand video broadcasting system for recurrent education"
+msgstr "継続教育向けオンデマンド動画配信システムの構築"
+
+#: src/components/Content.tsx:267
+msgid "by Roger Wattenhofer"
+msgstr "Roger Wattenhofer 著"
+
+#: src/components/Content.tsx:325
+msgid "Contact"
+msgstr "お問い合わせ"
+
+#: src/components/Content.tsx:62
 msgid "Currently I am working for <0>Dakken LLC.</0>, a data analysis and software development company."
 msgstr "現在は、データ分析およびソフトウェア開発会社である<0>合同会社 DA 研</0>で勤務しています。"
 
-#: src/components/Content.tsx:34
-msgid "I am a software engineer in Japan. "
-msgstr "私は日本のソフトウェアエンジニアであり、"
+#. js-lingui-explicit-id
+#: src/components/Content.tsx:24
+msgid "content.cv.toast.title"
+msgstr "現在利用できません"
 
-#: src/components/Content.tsx:47
+#: src/components/Content.tsx:304
+#~ msgid "Daiki Okayama, Yuya Higashikawa, and Shuichi Miyazaki, \"Online Exploration of Grid Graphs with Multiple Searchers\", In Proceedings of the 16th Annual Meeting of Asian Association for Algorithms and Computation (AAAC 2025), May 2025. Available at <0>cityu.edu.hk</0>."
+#~ msgstr "岡山大輝、東川雄也、宮﨑修一「Online Exploration of Grid Graphs with Multiple Searchers」, 第16回 Asian Association for Algorithms and Computation (AAAC 2025) 論文集, 2025年5月。<0>cityu.edu.hk</0>で閲覧可能。"
+
+#: src/components/Content.tsx:176
+msgid "Developing a web application for managing mental health"
+msgstr "メンタルヘルス管理のためのWebアプリケーション開発"
+
+#: src/components/Content.tsx:218
+msgid "etc... See my"
+msgstr "その他… 詳しくは私の"
+
+#: src/components/Content.tsx:152
+msgid "Feb 2024 - Apr 2024"
+msgstr "2024年2月 - 2024年4月"
+
+#: src/components/Content.tsx:212
+#~ msgid "Feb 2025 - Mar 2025"
+#~ msgstr "2025年2月 - 2025年3月"
+
+#: src/components/Content.tsx:303
+msgid "GitHub"
+msgstr "GitHub"
+
+#: src/components/Content.tsx:118
+msgid "Humor and comedy"
+msgstr "ユーモアとコメディ"
+
+#: src/components/Content.tsx:61
+msgid "I am a software engineer in Japan."
+msgstr "私は日本のソフトウェアエンジニアです。"
+
+#: src/components/Content.tsx:75
 msgid "I am also attending <0>Graduate School of Information Science, University of Hyogo</0>, majoring in online exploration algorithms."
 msgstr "現在は、<0>兵庫県立大学大学院 情報科学研究科</0>に在籍しており、オンライン探索アルゴリズムを専攻しています。"
 
-#: src/components/Content.tsx:40
-msgid "I received my Bachelor's degree in Social Information Science from <0>University of Hyogo</0>."
-msgstr "<0>兵庫県立大学</0>で社会情報科学の学士号を取得し、"
+#. js-lingui-explicit-id
+#: src/components/Content.tsx:29
+msgid "content.cv.toast.description"
+msgstr "現在CVを作成中です。近日公開予定です。"
 
-#: src/components/Content.tsx:59
+#: src/components/Content.tsx:103
+msgid "I am interested in:"
+msgstr "興味のある分野："
+
+#: src/components/Content.tsx:234
+msgid "I am studying the online graph exploration. Following is a brief introduction."
+msgstr "オンライングラフ探索を研究しています。以下は簡単な紹介です。"
+
+#: src/components/Content.tsx:128
+msgid "I have been working on some software development projects."
+msgstr "いくつかのソフトウェア開発プロジェクトに取り組んできました。"
+
+#: src/components/Content.tsx:67
+msgid "I received my Bachelor's degree in Social Information Science from <0>University of Hyogo</0>."
+msgstr "<0>兵庫県立大学</0>で社会情報科学の学士号を取得しました。"
+
+#: src/components/Content.tsx:155
+msgid "I was responsible for the development of a video broadcasting system for recurrent education. The system allows users to watch videos on demand, and provides a user-friendly interface for managing videos and users."
+msgstr "リカレント教育向けの動画配信システムの開発を担当しました。このシステムはオンデマンドで動画を視聴でき、動画とユーザーを管理する使いやすいインターフェースを提供します。"
+
+#: src/components/Content.tsx:242
+msgid "Imagine you made it your personal goal to visit all pubs of the city you just moved to and know nothing about. Since you are ambitious, you want to do it in one night, but as you walk into the first pub next door you notice that you do not have a map of the city. Luckily, on one wall you find a list of some of the closest pubs with information how far away they are and how to get there. As you are assured, such a list is available in every pub of the city, so you decide to conduct your quest by using only the information on these lists. Of course, you want to minimize the total distance you have to walk during your endeavor, but, after all, how much could a map help if you have these lists? Probably not too much, right?"
+msgstr "引っ越してきたばかりで何も知らない街のすべての酒場を巡ることを自分の目標にしたと想像してください。意欲的なあなたは一晩で達成したいと思っていますが、最初の酒場に入ったときに地図を持っていないことに気づきます。幸い、壁にはいくつか近くの酒場への距離と行き方が書かれたリストがあります。こうしたリストは街のどの酒場にもあるとわかったので、あなたはこれらのリストだけを頼りに探索を進めることにしました。もちろん移動距離を最小限に抑えたいところですが、結局のところ地図があったとしてもどれほど役立つでしょうか？おそらくそれほど変わらないのではないでしょうか。"
+
+#: src/components/Content.tsx:203
+msgid "In private, I write articles and create software. Here are some of my works:"
+msgstr "個人では記事を書いたりソフトウェアを作ったりしています。以下はその一部です。"
+
+#: src/components/Content.tsx:311
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: src/components/Content.tsx:296
+msgid "Links"
+msgstr "リンク"
+
+#: src/components/Content.tsx:88
 msgid "My dedicated CV is given <0>here</0>."
 msgstr "詳細な職務経歴書は<0>ここ</0>から取得できます。"
+
+#: src/components/Content.tsx:327
+msgid "Please send me a message through my <0>LinkedIn</0> page, or email found in my recent papers. I am always open to discussing new ideas and opportunities."
+msgstr "<0>LinkedIn</0>ページ、または最近の論文に記載のメール宛にご連絡ください。新しいアイデアや機会についていつでも歓迎します。"
+
+#: src/components/Content.tsx:185
+msgid "Press release is available at <0>here</0> (in Japanese)."
+msgstr "プレスリリースは<0>こちら</0>（日本語）でご覧いただけます。"
+
+#: src/components/Content.tsx:113
+msgid "Programming paradigms and Design patterns"
+msgstr "プログラミングパラダイムとデザインパターン"
+
+#: src/components/Content.tsx:275
+msgid "Publication / Presentation as a Researcher"
+msgstr "研究者としての発表・出版"
+
+#: src/components/Content.tsx:206
+#~ msgid "Replace the existing web application with Next.js"
+#~ msgstr "既存のWebアプリケーションをNext.jsへ置き換え"
+
+#: src/components/Content.tsx:182
+msgid "Sep 2024 - Apr 2025"
+msgstr "2024年9月 - 2025年4月"
+
+#: src/components/Content.tsx:319
+msgid "SlideShare"
+msgstr "SlideShare"
+
+#: src/components/Content.tsx:212
+msgid "Snake Game - Online PvP snake game"
+msgstr "Snake Game - オンラインPvPスネークゲーム"
+
+#: src/components/Content.tsx:124
+msgid "Software Development Projects"
+msgstr "ソフトウェア開発プロジェクト"
+
+#: src/components/Content.tsx:108
+msgid "Specifications of programming languages"
+msgstr "プログラミング言語の仕様"
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx:16
+msgid "footer.toggleLanguage"
+msgstr "言語を切り替える"
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx:11
+msgid "footer.toggleTheme"
+msgstr "テーマを切り替える"
+
+#: src/components/Content.tsx:230
+msgid "What do I study?"
+msgstr "何を研究していますか？"
+
+#: src/components/Content.tsx:57
+msgid "Who Am I?"
+msgstr "私について"
+
+#: src/components/Content.tsx:199
+msgid "Works as a Software Engineer"
+msgstr "ソフトウェアエンジニアとしての活動"

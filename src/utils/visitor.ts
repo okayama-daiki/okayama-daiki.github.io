@@ -11,6 +11,8 @@ const RETURNING_MESSAGES = ["Welcome Back!", "Hello again!", "Good to see you!"]
 
 const LONG_TIME_MESSAGES = ["Nice to see you again!"];
 
+const MILESTONE_MESSAGE = "Wow! This is your {count}th visit!";
+
 const LONG_TIME_THRESHOLD_DAYS = 30;
 const MILESTONE_VISIT_INTERVAL = 25;
 
@@ -56,10 +58,7 @@ export function updateAndGetGreetingMessage(): string {
   return getGreetingMessageFromData(updatedData, true);
 }
 
-function getGreetingMessageFromData(
-  data: VisitorData,
-  isUpdated: boolean,
-): string {
+function getGreetingMessageFromData(data: VisitorData, isUpdated: boolean): string {
   const now = Date.now();
   const daysSinceLastVisit = (now - data.lastVisit) / (24 * 60 * 60 * 1000);
 
@@ -71,7 +70,7 @@ function getGreetingMessageFromData(
   }
 
   if (data.visitCount % MILESTONE_VISIT_INTERVAL === 0) {
-    return `Wow! This is your ${data.visitCount}th visit!`;
+    return MILESTONE_MESSAGE.replace("{count}", `${data.visitCount}`);
   }
 
   if (daysSinceLastVisit >= LONG_TIME_THRESHOLD_DAYS) {

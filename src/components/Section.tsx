@@ -1,11 +1,14 @@
 import { Heading, Link, Separator, Stack } from "@chakra-ui/react";
+import type { ReactNode } from "react";
 
-export default function Section({ title, children }: { title: string; children: React.ReactNode }) {
+export default function Section({ title, id, children }: { title: ReactNode; id?: string; children: ReactNode }) {
+  const anchorId = id ?? (typeof title === "string" ? convertToAnchorId(title) : undefined);
+
   return (
-    <Stack color="fg.muted" lineHeight="tall" paddingY="2" id={convertToAnchorId(title)}>
+    <Stack color="fg.muted" lineHeight="tall" paddingY="2" id={anchorId}>
       {/* gap="0" is needed to remove the default margin between Heading and Separator */}
       <Stack gap="0">
-        <Link href={`#${convertToAnchorId(title)}`} variant="plain" _hover={{ textDecoration: "none" }}>
+        <Link href={anchorId ? `#${anchorId}` : undefined} variant="plain" _hover={{ textDecoration: "none" }}>
           <Heading fontWeight="bold" color="fg">
             {title}
           </Heading>

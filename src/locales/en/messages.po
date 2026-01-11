@@ -13,22 +13,210 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/Content.tsx:35
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:28
+#~ msgid "visitor.returning.goodToSeeYou"
+#~ msgstr "Good to see you!"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:24
+#~ msgid "visitor.returning.helloAgain"
+#~ msgstr "Hello again!"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:13
+#~ msgid "visitor.first.helloWorld"
+#~ msgstr "Hello, World!"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:35
+#~ msgid "visitor.longTime.niceToSeeYouAgain"
+#~ msgstr "Nice to see you again!"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:20
+#~ msgid "visitor.returning.welcomeBack"
+#~ msgstr "Welcome Back!"
+
+#. js-lingui-explicit-id
+#: src/utils/visitor.ts:41
+#~ msgid "visitor.milestone.count"
+#~ msgstr "Wow! This is your {count}th visit!"
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx:21
+msgid "footer.copyright"
+msgstr "© {year} Daiki Okayama"
+
+#: src/components/Content.tsx:146
+msgid "Building an on-demand video broadcasting system for recurrent education"
+msgstr "Building an on-demand video broadcasting system for recurrent education"
+
+#: src/components/Content.tsx:267
+msgid "by Roger Wattenhofer"
+msgstr "by Roger Wattenhofer"
+
+#: src/components/Content.tsx:325
+msgid "Contact"
+msgstr "Contact"
+
+#: src/components/Content.tsx:62
 msgid "Currently I am working for <0>Dakken LLC.</0>, a data analysis and software development company."
 msgstr "Currently I am working for <0>Dakken LLC.</0>, a data analysis and software development company."
 
-#: src/components/Content.tsx:34
-msgid "I am a software engineer in Japan. "
-msgstr "I am a software engineer in Japan. "
+#. js-lingui-explicit-id
+#: src/components/Content.tsx:24
+msgid "content.cv.toast.title"
+msgstr "Currently not available"
 
-#: src/components/Content.tsx:47
+#: src/components/Content.tsx:304
+#~ msgid "Daiki Okayama, Yuya Higashikawa, and Shuichi Miyazaki, \"Online Exploration of Grid Graphs with Multiple Searchers\", In Proceedings of the 16th Annual Meeting of Asian Association for Algorithms and Computation (AAAC 2025), May 2025. Available at <0>cityu.edu.hk</0>."
+#~ msgstr "Daiki Okayama, Yuya Higashikawa, and Shuichi Miyazaki, \"Online Exploration of Grid Graphs with Multiple Searchers\", In Proceedings of the 16th Annual Meeting of Asian Association for Algorithms and Computation (AAAC 2025), May 2025. Available at <0>cityu.edu.hk</0>."
+
+#: src/components/Content.tsx:176
+msgid "Developing a web application for managing mental health"
+msgstr "Developing a web application for managing mental health"
+
+#: src/components/Content.tsx:218
+msgid "etc... See my"
+msgstr "etc... See my"
+
+#: src/components/Content.tsx:152
+msgid "Feb 2024 - Apr 2024"
+msgstr "Feb 2024 - Apr 2024"
+
+#: src/components/Content.tsx:212
+#~ msgid "Feb 2025 - Mar 2025"
+#~ msgstr "Feb 2025 - Mar 2025"
+
+#: src/components/Content.tsx:303
+msgid "GitHub"
+msgstr "GitHub"
+
+#: src/components/Content.tsx:118
+msgid "Humor and comedy"
+msgstr "Humor and comedy"
+
+#: src/components/Content.tsx:61
+msgid "I am a software engineer in Japan."
+msgstr "I am a software engineer in Japan."
+
+#: src/components/Content.tsx:34
+#~ msgid "I am a software engineer in Japan. "
+#~ msgstr "I am a software engineer in Japan. "
+
+#: src/components/Content.tsx:75
 msgid "I am also attending <0>Graduate School of Information Science, University of Hyogo</0>, majoring in online exploration algorithms."
 msgstr "I am also attending <0>Graduate School of Information Science, University of Hyogo</0>, majoring in online exploration algorithms."
 
-#: src/components/Content.tsx:40
+#. js-lingui-explicit-id
+#: src/components/Content.tsx:29
+msgid "content.cv.toast.description"
+msgstr "I am currently working on my CV. It will be available soon."
+
+#: src/components/Content.tsx:103
+msgid "I am interested in:"
+msgstr "I am interested in:"
+
+#: src/components/Content.tsx:234
+msgid "I am studying the online graph exploration. Following is a brief introduction."
+msgstr "I am studying the online graph exploration. Following is a brief introduction."
+
+#: src/components/Content.tsx:128
+msgid "I have been working on some software development projects."
+msgstr "I have been working on some software development projects."
+
+#: src/components/Content.tsx:67
 msgid "I received my Bachelor's degree in Social Information Science from <0>University of Hyogo</0>."
 msgstr "I received my Bachelor's degree in Social Information Science from <0>University of Hyogo</0>."
 
-#: src/components/Content.tsx:59
+#: src/components/Content.tsx:155
+msgid "I was responsible for the development of a video broadcasting system for recurrent education. The system allows users to watch videos on demand, and provides a user-friendly interface for managing videos and users."
+msgstr "I was responsible for the development of a video broadcasting system for recurrent education. The system allows users to watch videos on demand, and provides a user-friendly interface for managing videos and users."
+
+#. js-lingui-explicit-id
+#: src/components/Typing.tsx:11
+msgid "typing.name"
+msgstr "I'm Daiki Okayama."
+
+#: src/components/Content.tsx:242
+msgid "Imagine you made it your personal goal to visit all pubs of the city you just moved to and know nothing about. Since you are ambitious, you want to do it in one night, but as you walk into the first pub next door you notice that you do not have a map of the city. Luckily, on one wall you find a list of some of the closest pubs with information how far away they are and how to get there. As you are assured, such a list is available in every pub of the city, so you decide to conduct your quest by using only the information on these lists. Of course, you want to minimize the total distance you have to walk during your endeavor, but, after all, how much could a map help if you have these lists? Probably not too much, right?"
+msgstr "Imagine you made it your personal goal to visit all pubs of the city you just moved to and know nothing about. Since you are ambitious, you want to do it in one night, but as you walk into the first pub next door you notice that you do not have a map of the city. Luckily, on one wall you find a list of some of the closest pubs with information how far away they are and how to get there. As you are assured, such a list is available in every pub of the city, so you decide to conduct your quest by using only the information on these lists. Of course, you want to minimize the total distance you have to walk during your endeavor, but, after all, how much could a map help if you have these lists? Probably not too much, right?"
+
+#: src/components/Content.tsx:203
+msgid "In private, I write articles and create software. Here are some of my works:"
+msgstr "In private, I write articles and create software. Here are some of my works:"
+
+#: src/components/Content.tsx:311
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: src/components/Content.tsx:296
+msgid "Links"
+msgstr "Links"
+
+#: src/components/Content.tsx:88
 msgid "My dedicated CV is given <0>here</0>."
 msgstr "My dedicated CV is given <0>here</0>."
+
+#: src/components/Content.tsx:327
+msgid "Please send me a message through my <0>LinkedIn</0> page, or email found in my recent papers. I am always open to discussing new ideas and opportunities."
+msgstr "Please send me a message through my <0>LinkedIn</0> page, or email found in my recent papers. I am always open to discussing new ideas and opportunities."
+
+#: src/components/Content.tsx:185
+msgid "Press release is available at <0>here</0> (in Japanese)."
+msgstr "Press release is available at <0>here</0> (in Japanese)."
+
+#: src/components/Content.tsx:113
+msgid "Programming paradigms and Design patterns"
+msgstr "Programming paradigms and Design patterns"
+
+#: src/components/Content.tsx:275
+msgid "Publication / Presentation as a Researcher"
+msgstr "Publication / Presentation as a Researcher"
+
+#: src/components/Content.tsx:206
+#~ msgid "Replace the existing web application with Next.js"
+#~ msgstr "Replace the existing web application with Next.js"
+
+#: src/components/Content.tsx:182
+msgid "Sep 2024 - Apr 2025"
+msgstr "Sep 2024 - Apr 2025"
+
+#: src/components/Content.tsx:319
+msgid "SlideShare"
+msgstr "SlideShare"
+
+#: src/components/Content.tsx:212
+msgid "Snake Game - Online PvP snake game"
+msgstr "Snake Game - Online PvP snake game"
+
+#: src/components/Content.tsx:124
+msgid "Software Development Projects"
+msgstr "Software Development Projects"
+
+#: src/components/Content.tsx:108
+msgid "Specifications of programming languages"
+msgstr "Specifications of programming languages"
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx:16
+msgid "footer.toggleLanguage"
+msgstr "Toggle language"
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx:11
+msgid "footer.toggleTheme"
+msgstr "Toggle theme"
+
+#: src/components/Content.tsx:230
+msgid "What do I study?"
+msgstr "What do I study?"
+
+#: src/components/Content.tsx:57
+msgid "Who Am I?"
+msgstr "Who Am I?"
+
+#: src/components/Content.tsx:199
+msgid "Works as a Software Engineer"
+msgstr "Works as a Software Engineer"
