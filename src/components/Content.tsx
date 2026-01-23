@@ -1,5 +1,4 @@
-import { Blockquote, Container, Link, List, Spacer, Stack, Text, Timeline } from "@chakra-ui/react";
-import { Trans } from "@lingui/react/macro";
+import { Container, Link, List, Spacer, Stack, Text, Timeline } from "@chakra-ui/react";
 import { FaPersonFalling } from "react-icons/fa6";
 import { PiVideoDuotone } from "react-icons/pi";
 import { RiMentalHealthLine } from "react-icons/ri";
@@ -21,34 +20,22 @@ export default function Content() {
       <Stack>
         <Section title="Who Am I?">
           <Text>
-            <Trans>I am a software engineer in Japan. </Trans>
-            <Trans>
-              Currently I am working for <Link href="https://dakken.co.jp">Dakken LLC.</Link>, a data analysis and
-              software development company.
-            </Trans>
-            <Trans>
-              I received my Bachelor's degree in Social Information Science from{" "}
-              <Link href="https://www.u-hyogo.ac.jp/english/">University of Hyogo</Link>.
-            </Trans>
-            <Trans>
-              I am also attending{" "}
-              <Link href="https://u-hyogo-gsis.org/en/">
-                Graduate School of Information Science, University of Hyogo
-              </Link>
-              , majoring in online exploration algorithms.
-            </Trans>
+            I am a software engineer in Japan. Currently I am working for{" "}
+            <Link href="https://dakken.co.jp">Dakken LLC.</Link>, a data analysis and software development company. I
+            received my Bachelor's degree in Social Information Science from{" "}
+            <Link href="https://www.u-hyogo.ac.jp/english/">University of Hyogo</Link>. I am also attending{" "}
+            <Link href="https://u-hyogo-gsis.org/en/">Graduate School of Information Science, University of Hyogo</Link>
+            , majoring in online exploration algorithms.
           </Text>
 
           <Spacer height={4} />
 
           <Text>
-            <Trans>
-              My dedicated CV is given{" "}
-              <Link href="javascript:void(0)" onClick={alertNotAvailable}>
-                here
-              </Link>
-              .
-            </Trans>
+            My dedicated CV is given{" "}
+            <Link href="javascript:void(0)" onClick={alertNotAvailable}>
+              here
+            </Link>
+            .
           </Text>
 
           <Spacer height={4} />
@@ -136,28 +123,6 @@ export default function Content() {
 
         <Section title="What do I study?">
           <Text>I am studying the online graph exploration. Following is a brief introduction.</Text>
-
-          <Blockquote.Root my="2">
-            <Blockquote.Content>
-              Imagine you made it your personal goal to visit all pubs of the city you just moved to and know nothing
-              about. Since you are ambitious, you want to do it in one night, but as you walk into the first pub next
-              door you notice that you do not have a map of the city. Luckily, on one wall you find a list of some of
-              the closest pubs with information how far away they are and how to get there. As you are assured, such a
-              list is available in every pub of the city, so you decide to conduct your quest by using only the
-              information on these lists. Of course, you want to minimize the total distance you have to walk during
-              your endeavor, but, after all, how much could a map help if you have these lists? Probably not too much,
-              right?
-            </Blockquote.Content>
-            <Blockquote.Caption>
-              -{" "}
-              <cite>
-                <Link href="https://tik-old.ee.ethz.ch/file//a0b760df702cca0a7686388f89cdbffb/bait.pdf">
-                  Online Graph Exploration
-                </Link>{" "}
-                by Roger Wattenhofer
-              </cite>
-            </Blockquote.Caption>
-          </Blockquote.Root>
         </Section>
 
         <Section title="Publication / Presentation as a Researcher">
