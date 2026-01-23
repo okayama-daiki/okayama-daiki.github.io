@@ -1,10 +1,9 @@
 import { HStack, IconButton, Text } from "@chakra-ui/react";
-import { useLingui } from "@lingui/react/macro";
+
 import { CiDark, CiLight } from "react-icons/ci";
 import { useColorMode } from "@/components/ui/color-mode";
 
 export default function Footer() {
-  const { i18n } = useLingui();
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -20,21 +19,7 @@ export default function Footer() {
         >
           {colorMode === "light" ? <CiDark /> : <CiLight />}
         </IconButton>
-        <IconButton
-          aria-label="Toggle language"
-          size="md"
-          variant="ghost"
-          _hover={{ bg: "none" }}
-          onClick={() => {
-            if (i18n.locale === "en") {
-              i18n.activate("ja");
-            } else {
-              i18n.activate("en");
-            }
-          }}
-        >
-          {i18n.locale === "en" ? "ja" : "en"}
-        </IconButton>
+
         {/* <Link href="https://coff.ee/daikiokayama" target="_blank" rel="noopener noreferrer">
           <IconButton aria-label="Like this site" size="md" variant="ghost">
             <CiCoffeeCup />

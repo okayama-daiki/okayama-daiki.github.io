@@ -56,10 +56,7 @@ export function updateAndGetGreetingMessage(): string {
   return getGreetingMessageFromData(updatedData, true);
 }
 
-function getGreetingMessageFromData(
-  data: VisitorData,
-  isUpdated: boolean,
-): string {
+function getGreetingMessageFromData(data: VisitorData, isUpdated: boolean): string {
   const now = Date.now();
   const daysSinceLastVisit = (now - data.lastVisit) / (24 * 60 * 60 * 1000);
 
