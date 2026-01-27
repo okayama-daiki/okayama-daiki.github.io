@@ -1,52 +1,26 @@
-import { Container, Link, List, Spacer, Stack, Text, Timeline } from "@chakra-ui/react";
+import { Container, Link, List, Spacer, Stack, Text, Timeline, Heading } from "@chakra-ui/react";
 import { FaPersonFalling } from "react-icons/fa6";
 import { PiVideoDuotone } from "react-icons/pi";
 import { RiMentalHealthLine } from "react-icons/ri";
 import Footer from "./Footer";
 import Section from "./Section";
-import { toaster } from "./ui/toaster";
 
 export default function Content() {
-  const alertNotAvailable = () => {
-    toaster.create({
-      title: "Currently not available",
-      description: "I am currently working on my CV. It will be available soon.",
-      type: "info",
-    });
-  };
-
   return (
     <Container maxW="5xl" pb="2">
       <Stack>
         <Section title="Who Am I?">
           <Text>
-            I am a software engineer in Japan. Currently I am working for{" "}
-            <Link href="https://dakken.co.jp">Dakken LLC.</Link>, a data analysis and software development company. I
-            received my Bachelor's degree in Social Information Science from{" "}
-            <Link href="https://www.u-hyogo.ac.jp/english/">University of Hyogo</Link>. I am also attending{" "}
+            I am a programmer in Japan and occasionally take on software development contracts from{" "}
+            <Link href="https://dakken.co.jp">Dakken LLC.</Link>, a student-run company focusing on data analysis and
+            software development. I received my Bachelor's degree in Social Information Science from{" "}
+            <Link href="https://www.u-hyogo.ac.jp/english/">University of Hyogo</Link>. I am currently a Master's
+            student at{" "}
             <Link href="https://u-hyogo-gsis.org/en/">Graduate School of Information Science, University of Hyogo</Link>
             , majoring in online exploration algorithms.
           </Text>
 
           <Spacer height={4} />
-
-          <Text>
-            My dedicated CV is given{" "}
-            <Link href="javascript:void(0)" onClick={alertNotAvailable}>
-              here
-            </Link>
-            .
-          </Text>
-
-          <Spacer height={4} />
-
-          <Text>I am interested in:</Text>
-
-          <List.Root>
-            <List.Item>Specifications of programming languages</List.Item>
-            <List.Item>Programming paradigms and Design patterns</List.Item>
-            <List.Item>Humor and comedy</List.Item>
-          </List.Root>
         </Section>
 
         <Section title="Software Development Projects">
@@ -105,27 +79,20 @@ export default function Content() {
           </Timeline.Root>
         </Section>
 
-        <Section title="Works as a Software Engineer">
-          <Text>In private, I write articles and create software. Here are some of my works:</Text>
+        <Section title="What is 'Online Graph Exploration'?">
+          <Text>
+            Online graph exploration is a class of problems in theoretical computer science that studies how one or more
+            agents can efficiently explore an unknown graph. In this setting, the structure of the graph is not known in
+            advance and is revealed only through exploration, which requires algorithms to make decisions online without
+            full information. My research focuses on multi-agent exploration in grid graphs, where the goal is to
+            coordinate multiple searchers so that all vertices are visited with provable performance guarantees.
+          </Text>
 
-          <List.Root>
-            <List.Item>
-              <Link href="https://snake-game.daiki.dev">Snake Game - Online PvP snake game</Link>
-            </List.Item>
-            <List.Item>
-              etc... See my{" "}
-              <Link href="https://github.com/okayama-daiki" target="_blank">
-                GitHub
-              </Link>
-            </List.Item>
-          </List.Root>
-        </Section>
+          <Spacer height={2} />
+          <Heading fontWeight="bold" color="fg" size="md">
+            Publications
+          </Heading>
 
-        <Section title="What do I study?">
-          <Text>I am studying the online graph exploration. Following is a brief introduction.</Text>
-        </Section>
-
-        <Section title="Publication / Presentation as a Researcher">
           <List.Root>
             <List.Item>
               Daiki Okayama, Yuya Higashikawa, and Shuichi Miyazaki, "Online Exploration of Grid Graphs with Multiple
