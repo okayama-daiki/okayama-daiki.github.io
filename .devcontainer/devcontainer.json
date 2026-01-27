@@ -3,6 +3,7 @@
   "dockerFile": "Dockerfile",
   "context": "..",
   "postCreateCommand": "bun install",
+  "appPort": [5173],
   "customizations": {
     "vscode": {
       "extensions": ["biomejs.biome"]
