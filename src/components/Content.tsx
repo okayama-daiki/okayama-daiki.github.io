@@ -17,7 +17,7 @@ export default function Content() {
             <Link href="https://www.u-hyogo.ac.jp/english/">University of Hyogo</Link>. I am currently a Master's
             student at{" "}
             <Link href="https://u-hyogo-gsis.org/en/">Graduate School of Information Science, University of Hyogo</Link>
-            , majoring in online exploration algorithms.
+            , majoring in online graph exploration algorithms.
           </Text>
 
           <Spacer height={4} />
