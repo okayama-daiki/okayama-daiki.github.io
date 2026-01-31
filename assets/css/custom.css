@@ -1,0 +1,15 @@
+/* Dark mode background overrides */
+.theme--dark .body,
+.theme--dark .header,
+.theme--dark .nav__list,
+.theme--dark .post,
+.theme--dark .optionswitch__list,
+.theme--dark .post__content .chroma {
+	background-color: #080808;
+}
+
+.theme--dark .optionswitch__triangle::before {
+	background: #080808;
+	border-color: #080808;
+	box-shadow: 0 8px 16px rgba(226, 226, 226, 0.1);
+}
