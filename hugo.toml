@@ -1,0 +1,61 @@
+baseURL = 'https://okayama.daiki.dev'
+title = 'Daiki OKAYAMA'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false  # set to true to have language code in all URLs
+
+[languages]
+  [languages.en]
+    languageName = "EN"
+    weight = 100
+  [languages.ja]
+    languageName = "JA"
+    weight = 200
+
+[module]
+  # uncomment line below for temporary local development of module
+  # replacements = "github.com/lxndrblz/anatole -> ../../anatole"
+  [[module.imports]]
+    path = "github.com/lxndrblz/anatole"
+    disable = false
+
+[params]
+title = "I'm Daiki Okayama"
+author = "Daiki OKAYAMA"
+description = "A personal blog about programming and technology."
+profilePicture = "images/profile.jpg"
+favicon = "favicons/"
+customCss = ["css/custom.css", "css/styles.css"]
+mainSections = []
+readMore = true
+hidesidebar = true
+reversepagetitle = true
+fullPostContent = true
+
+[markup]
+    [markup.goldmark]
+      [markup.goldmark.renderer]
+        unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
+[params.math]
+enable = true  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "mathjax"  # options: "katex", "mathjax". default is "katex".
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/daikiokayama/"
+
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/okayama-daiki"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
