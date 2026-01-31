@@ -5,11 +5,34 @@
 .theme--dark .post,
 .theme--dark .optionswitch__list,
 .theme--dark .post__content .chroma {
-	background-color: #080808;
+	background-color: #121212;
 }
 
 .theme--dark .optionswitch__triangle::before {
-	background: #080808;
-	border-color: #080808;
+	background: #121212;
+	border-color: #121212;
 	box-shadow: 0 8px 16px rgba(226, 226, 226, 0.1);
+}
+
+/* Translation notice */
+.translation-notice {
+	padding: 0.75rem 1rem;
+	margin: 1rem 0;
+	border: 1px solid #d8e5ff;
+	background: #f3f7ff;
+	/*font-size: 0.95rem;*/
+}
+
+.translation-notice__extra {
+	margin-top: 0.35rem;
+	color: #555;
+}
+
+.theme--dark .translation-notice {
+	border-color: #2f4a80;
+	background: #121a2e;
+}
+
+.theme--dark .translation-notice__extra {
+	color: #cfd8e3;
 }

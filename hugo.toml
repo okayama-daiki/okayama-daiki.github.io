@@ -1,6 +1,15 @@
 baseURL = 'https://okayama.daiki.dev'
-languageCode = 'en-us'
 title = 'Daiki OKAYAMA'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false  # set to true to have language code in all URLs
+
+[languages]
+  [languages.en]
+    languageName = "EN"
+    weight = 100
+  [languages.ja]
+    languageName = "JA"
+    weight = 200
 
 [module]
   # uncomment line below for temporary local development of module
@@ -11,11 +20,31 @@ title = 'Daiki OKAYAMA'
 
 [params]
 title = "I'm Daiki Okayama"
-author = "Daiki Okayama"
+author = "Daiki OKAYAMA"
 description = "A personal blog about programming and technology."
 profilePicture = "images/profile.jpg"
 favicon = "favicons/"
 customCss = ["css/custom.css", "css/styles.css"]
+mainSections = []
+readMore = true
+hidesidebar = true
+reversepagetitle = true
+fullPostContent = true
+
+[markup]
+    [markup.goldmark]
+      [markup.goldmark.renderer]
+        unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
+[params.math]
+enable = true  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "mathjax"  # options: "katex", "mathjax". default is "katex".
 
 [[params.socialIcons]]
 icon = "fab fa-linkedin"
@@ -26,23 +55,3 @@ url = "https://www.linkedin.com/in/daikiokayama/"
 icon = "fab fa-github"
 title = "GitHub"
 url = "https://github.com/okayama-daiki"
-
-[menu]
-
-  [[menu.main]]
-  name = "Home"
-  identifier = "home"
-  weight = 100
-  url = "/"
-
-  [[menu.main]]
-  name = "Posts"
-  weight = 200
-  identifier = "posts"
-  url = "/post/"
-
-  [[menu.main]]
-  name = "About"
-  weight = 300
-  identifier = "about"
-  url = "/about/"
