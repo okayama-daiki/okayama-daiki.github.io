@@ -55,3 +55,7 @@ url = "https://www.linkedin.com/in/daikiokayama/"
 icon = "fab fa-github"
 title = "GitHub"
 url = "https://github.com/okayama-daiki"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
