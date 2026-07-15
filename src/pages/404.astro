@@ -1,0 +1,21 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+
+<BaseLayout title="Page not found" description="The requested page could not be found." canonicalPath="/404.html">
+  <section>
+    <Wrapper variant="standard" class="pb-24 pt-40 lg:pt-72">
+      <div class="grid grid-cols-1 items-end gap-y-8 lg:grid-cols-4">
+        <div class="lg:col-span-2 lg:col-start-3">
+          <Text tag="p" variant="textXS" class="mb-4 uppercase text-base-600 dark:text-base-300">Error 404</Text>
+          <Text tag="h1" variant="displayLG" class="font-semibold leading-snug tracking-tighter text-base-900 dark:text-white">
+            Page not found.
+          </Text>
+          <a href="/" class="mt-8 inline-block text-sm text-base-600 underline underline-offset-4 dark:text-base-300">Return home</a>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

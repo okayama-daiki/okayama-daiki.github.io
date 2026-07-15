@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "tailwind-scrollbar-hide";
+
+@theme {
+  /* Typography */
+  --font-sans: "Inter", sans-serif;
+  /* accent  */
+  --color-accent-50: oklch(0.982 0.029 125.9);
+  --color-accent-100: oklch(0.961 0.065 127.2);
+  --color-accent-200: oklch(0.925 0.122 129.7);
+  --color-accent-300: oklch(0.877 0.179 131.4);
+  --color-accent-400: oklch(0.839 0.199 132.6);
+  --color-accent-500: oklch(0.744 0.209 135);
+  --color-accent-600: oklch(0.628 0.18 135.7);
+  --color-accent-700: oklch(0.517 0.143 135.4);
+  --color-accent-800: oklch(0.441 0.115 134.8);
+  --color-accent-900: oklch(0.394 0.096 135);
+  --color-accent-950: oklch(0.268 0.069 135.7);
+  /* base*/
+  --color-base-50: oklch(0.985 0 0);
+  --color-base-100: oklch(0.97 0 0);
+  --color-base-200: oklch(0.922 0 0);
+  --color-base-300: oklch(0.87 0 0);
+  --color-base-400: oklch(0.708 0 0);
+  --color-base-500: oklch(0.556 0 0);
+  --color-base-600: oklch(0.439 0 0);
+  --color-base-700: oklch(0.371 0 0);
+  --color-base-800: oklch(0.269 0 0);
+  --color-base-900: oklch(0.205 0 0);
+  --color-base-950: oklch(0.145 0 0);
+}
+
+@layer base {
+  html {
+    color-scheme: light dark;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-accent-200);
+    color: var(--color-base-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-600);
+    outline-offset: 4px;
+  }
+}
+
+#about p a,
+.article-body a {
+  color: var(--color-base-900);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.article-body pre {
+  border-radius: 1.5rem;
+}
+
+.article-body blockquote {
+  border-left-color: var(--color-accent-500);
+  border-radius: 0 1rem 1rem 0;
+  background: var(--color-base-50);
+  padding: 1rem 1.25rem;
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  #about p a,
+  .article-body a {
+    color: white;
+  }
+
+  .article-body blockquote {
+    background: var(--color-base-900);
+  }
+}

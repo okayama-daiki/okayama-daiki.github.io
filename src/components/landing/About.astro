@@ -1,0 +1,44 @@
+---
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+
+<section class="scroll-mt-24" id="about">
+  <Wrapper variant="standard" class="py-12 lg:py-24">
+    <div class="grid grid-cols-1 items-start gap-8 border-t border-base-200 pt-12 dark:border-base-800 lg:grid-cols-4">
+      <div class="lg:col-start-2">
+        <Text tag="p" variant="textSM" class="text-base-600 dark:text-base-300">
+          About<br />Hyogo, Japan
+        </Text>
+      </div>
+      <Text tag="h2" variant="textXL" class="font-semibold leading-snug tracking-tighter text-base-900 dark:text-white lg:col-span-2">
+        Research and software development
+      </Text>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-4">
+      <img
+        src="/images/profile.jpg"
+        width="833"
+        height="833"
+        alt="Portrait of Daiki Okayama"
+        class="aspect-square w-full rounded-4xl object-cover lg:col-span-2"
+        loading="lazy"
+      />
+      <div class="space-y-6 text-base leading-relaxed text-base-600 dark:text-base-300 lg:col-span-2">
+        <p>
+          I am a master's student in Japan and enjoy programming as a hobby. I occasionally take on software development contracts from{" "}
+          <a href="https://dakken.co.jp" target="_blank" rel="noreferrer">Dakken LLC.</a>,
+          a student-run company focused on data analysis and software development.
+        </p>
+        <p>
+          I received my bachelor's degree in Social Information Science from the{" "}
+          <a href="https://www.u-hyogo.ac.jp/english/" target="_blank" rel="noreferrer">University of Hyogo</a>.
+          I am now a master's student at its{" "}
+          <a href="https://u-hyogo-gsis.org/en/" target="_blank" rel="noreferrer">Graduate School of Information Science</a>,
+          where I study online exploration.
+        </p>
+      </div>
+    </div>
+  </Wrapper>
+</section>

@@ -1,0 +1,70 @@
+---
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import ArrowRight from "@/components/fundations/icons/ArrowRight.astro";
+
+const resources = [
+  {
+    type: "Research Library",
+    title: "Online Graph Exploration",
+    description:
+      "A public Zotero library collecting papers and references on online graph exploration, maintained alongside my research.",
+    platform: "Zotero",
+    href: "https://www.zotero.org/groups/6609366/online-graph-exploration",
+  },
+  {
+    type: "Open-source Tool",
+    title: "drawio2tikz",
+    description:
+      "A command-line tool that converts draw.io diagrams into TikZ while preserving labels and handling SVG compatibility issues in the conversion pipeline.",
+    platform: "GitHub",
+    href: "https://github.com/okayama-daiki/drawio2tikz",
+  },
+];
+---
+
+<section class="scroll-mt-24" id="resources">
+  <Wrapper variant="standard" class="py-12 lg:py-24">
+    <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-4">
+      <div class="lg:col-start-2">
+        <Text tag="p" variant="textSM" class="text-base-600 dark:text-base-300">
+          Research & tools<br />Public resources
+        </Text>
+      </div>
+      <Text tag="h2" variant="textXL" class="font-semibold leading-snug tracking-tighter text-base-900 dark:text-white lg:col-span-2">
+        Resources
+      </Text>
+    </div>
+
+    <div class="mt-12">
+      {resources.map((resource) => (
+        <article class="border-t border-base-200 py-12 dark:border-base-800">
+          <a
+            href={resource.href}
+            target="_blank"
+            rel="noreferrer"
+            class="group grid grid-cols-1 items-start gap-4 lg:grid-cols-4"
+          >
+            <Text tag="p" variant="textXS" class="uppercase text-base-600 dark:text-base-300">
+              {resource.type}
+            </Text>
+            <Text tag="h3" variant="textLG" class="font-semibold leading-tight text-base-900 dark:text-white">
+              {resource.title}
+            </Text>
+            <div class="space-y-3">
+              <Text tag="p" variant="textSM" class="text-base-600 dark:text-base-300">
+                {resource.description}
+              </Text>
+              <Text tag="p" variant="textXS" class="uppercase text-base-600 dark:text-base-300">
+                {resource.platform}
+              </Text>
+            </div>
+            <span class="text-base-900 transition-transform group-hover:translate-x-1 dark:text-white lg:ml-auto">
+              <ArrowRight class="size-4" />
+            </span>
+          </a>
+        </article>
+      ))}
+    </div>
+  </Wrapper>
+</section>

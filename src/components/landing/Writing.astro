@@ -1,0 +1,35 @@
+---
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import ArrowRight from "@/components/fundations/icons/ArrowRight.astro";
+---
+
+<section class="scroll-mt-24" id="writing">
+  <Wrapper variant="standard" class="py-12 lg:py-24">
+    <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-4">
+      <div class="lg:col-start-2">
+        <Text tag="p" variant="textSM" class="text-base-600 dark:text-base-300">
+          Technical notes<br />2026 — Now
+        </Text>
+      </div>
+      <Text tag="h2" variant="textXL" class="font-semibold leading-snug tracking-tighter text-base-900 dark:text-white lg:col-span-2">
+        Writing
+      </Text>
+    </div>
+
+    <article class="mt-12 border-t border-base-200 py-12 dark:border-base-800">
+      <a href="/posts/what-is-object/" class="group grid grid-cols-1 items-start gap-4 lg:grid-cols-4">
+        <Text tag="p" variant="textXS" class="uppercase text-base-600 dark:text-base-300">2026.01.31 — Python</Text>
+        <Text tag="h3" variant="textLG" class="font-semibold leading-tight text-base-900 dark:text-white">
+          Understanding Objects in Python
+        </Text>
+        <Text tag="p" variant="textSM" class="text-base-600 dark:text-base-300">
+          A practical tour of values, types, identity, references, mutability, and garbage collection in Python.
+        </Text>
+        <span class="text-base-900 transition-transform group-hover:translate-x-1 dark:text-white lg:ml-auto">
+          <ArrowRight class="size-4" />
+        </span>
+      </a>
+    </article>
+  </Wrapper>
+</section>

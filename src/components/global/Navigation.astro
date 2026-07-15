@@ -1,0 +1,39 @@
+---
+import Logo from "@/components/assets/Logo.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const links = [
+  { href: "/#about", text: "About" },
+  { href: "/#publications", text: "Publications" },
+  { href: "/#resources", text: "Resources" },
+  { href: "/#writing", text: "Writing" },
+];
+---
+
+<nav class="fixed top-0 z-10 w-full border-b border-base-100/80 bg-white/95 backdrop-blur dark:border-base-800 dark:bg-base-950/95">
+  <Wrapper variant="standard" class="py-3">
+    <div class="grid grid-cols-2 items-start gap-4 lg:grid-cols-4">
+      <a href="/" class="flex" aria-label="Home">
+        <Logo class="text-xs font-semibold tracking-tight text-base-900 dark:text-white" />
+      </a>
+      <Text tag="p" variant="textXS" class="hidden tracking-tight text-base-600 dark:text-base-300 sm:block">
+        Hyogo, Japan<br />Master's Student
+      </Text>
+      <div class="hidden items-center gap-6 lg:flex">
+        {links.map((link) => (
+          <a href={link.href} class="text-xs tracking-tight text-base-600 transition-colors hover:text-base-900 dark:text-base-300 dark:hover:text-white">
+            {link.text}
+          </a>
+        ))}
+      </div>
+      <a
+        href="/cv.pdf"
+        download
+        class="ml-auto text-xs tracking-tight text-base-600 transition-colors hover:text-base-900 dark:text-base-300 dark:hover:text-white"
+      >
+        Download CV
+      </a>
+    </div>
+  </Wrapper>
+</nav>
