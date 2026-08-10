@@ -1,0 +1,114 @@
+---
+interface Book {
+  title: string;
+  author: string;
+  isbn: string;
+  category: string;
+  note?: string;
+  favorite?: boolean;
+}
+
+interface Props {
+  book: Book;
+  index: number;
+  priority?: boolean;
+}
+
+const { book, index, priority = false } = Astro.props;
+const isbn = book.isbn.replaceAll("-", "");
+---
+
+<article>
+  <a
+    href={`https://www.hanmoto.com/bd/isbn/${isbn}`}
+    target="_blank"
+    rel="noreferrer"
+    class="book group block"
+    aria-label={`${book.title}、${book.author}（書誌情報を開く）`}
+  >
+    <div class="cover-wrap">
+      <div class="book-fallback" aria-hidden="true">
+        <span>{String(index + 1).padStart(2, "0")}</span>
+        <p>{book.title}</p>
+        <small>{book.author}</small>
+      </div>
+      <img
+        src={`/images/books/${isbn}.jpg`}
+        alt={`${book.title}の表紙`}
+        width="600"
+        height="850"
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        class="book-cover"
+        data-book-cover
+      />
+    </div>
+    <div class="mt-4 flex items-start justify-between gap-3">
+      <div>
+        <h3 class="text-sm font-semibold leading-snug tracking-tight text-base-900 dark:text-white">{book.title}</h3>
+        <p class="mt-1 text-xs text-base-500 dark:text-base-400">{book.author}</p>
+      </div>
+      {book.favorite && (
+        <span class="shrink-0 text-sm leading-none text-accent-600 dark:text-accent-400" title="Favorite" aria-label="Favorite">●</span>
+      )}
+    </div>
+  </a>
+  {book.note && (
+    <p class="mt-4 border-l border-accent-500 pl-3 text-xs leading-relaxed text-base-600 dark:text-base-300">{book.note}</p>
+  )}
+</article>
+
+<style>
+  .cover-wrap {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;
+    background: var(--color-base-100);
+    box-shadow: 0 1.25rem 2.5rem -1.6rem rgb(0 0 0 / 0.55);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+  }
+
+  .cover-wrap::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0 auto 0 0;
+    width: 0.42rem;
+    border-right: 1px solid rgb(255 255 255 / 0.18);
+    background: linear-gradient(90deg, rgb(0 0 0 / 0.16), transparent);
+    pointer-events: none;
+  }
+
+  .book-cover {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .book-cover[hidden] { display: none; }
+
+  .book-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.1rem;
+    background: linear-gradient(145deg, transparent 0 58%, rgb(255 255 255 / 0.1) 58% 59%, transparent 59%), var(--color-base-900);
+    color: white;
+  }
+
+  .book-fallback span { font-size: 0.6rem; letter-spacing: 0.14em; opacity: 0.5; }
+  .book-fallback p { max-width: 9em; margin-top: auto; font-size: 1rem; font-weight: 650; line-height: 1.15; letter-spacing: -0.035em; }
+  .book-fallback small { margin-top: 0.65rem; font-size: 0.65rem; opacity: 0.62; }
+
+  .book:hover .cover-wrap {
+    transform: translateY(-0.35rem);
+    box-shadow: 0 1.75rem 3rem -1.45rem rgb(0 0 0 / 0.62);
+  }
+
+  @media (prefers-color-scheme: dark) { .cover-wrap { background: var(--color-base-900); } }
+  @media (prefers-reduced-motion: reduce) { .cover-wrap { transition: none; } }
+</style>

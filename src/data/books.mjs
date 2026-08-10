@@ -1,0 +1,22 @@
+// 新しく読んだ本は配列の先頭に追加します。
+// favorite と note は、付けたい本にだけ追加すれば大丈夫です。
+export const books = [
+    { title: "さよならドビュッシー", author: "中山七里", isbn: "9784796675307", category: "Fiction" },
+    { title: "方舟", author: "夕木春央", isbn: "9784065358542", category: "Fiction" },
+    { title: "同志少女よ、敵を撃て", author: "逢坂冬馬", isbn: "9784152100641", category: "Fiction" },
+    { title: "生殖記", author: "朝井リョウ", isbn: "9784093867306", category: "Fiction" },
+    { title: "異常〖アノマリー〗", author: "エルヴェ・ル・テリエ", isbn: "9784152100795", category: "Fiction", favorite: true },
+    { title: "爆弾", author: "呉勝浩", isbn: "9784065363706", category: "Fiction" },
+    { title: "病に至る恋", author: "斜線堂有紀", isbn: "9784049166262", category: "Fiction" },
+    { title: "傲慢と善良", author: "辻村深月", isbn: "9784022650597", category: "Fiction" },
+    { title: "プロジェクト・ヘイル・メアリー 下", author: "アンディ・ウィアー", isbn: "9784152100719", category: "Fiction", favorite: true },
+    { title: "プロジェクト・ヘイル・メアリー 上", author: "アンディ・ウィアー", isbn: "9784152100702", category: "Fiction", favorite: true },
+    { title: "地面師たち ファイナル・ベッツ", author: "新庄耕", isbn: "9784087718737", category: "Fiction" },
+    { title: "地面師たち アノニマス", author: "新庄耕", isbn: "9784087447132", category: "Fiction" },
+    { title: "地面師たち", author: "新庄耕", isbn: "9784087443387", category: "Fiction" },
+    { title: "8番出口", author: "川村元気", isbn: "9784910576046", category: "Fiction" },
+    { title: "踊りつかれて", author: "塩田武士", isbn: "9784163919805", category: "Fiction" },
+    { title: "新世界より（下）", author: "貴志祐介", isbn: "9784062768559", category: "Fiction" },
+    { title: "新世界より（中）", author: "貴志祐介", isbn: "9784062768542", category: "Fiction" },
+    { title: "新世界より（上）", author: "貴志祐介", isbn: "9784062768535", category: "Fiction" },
+];

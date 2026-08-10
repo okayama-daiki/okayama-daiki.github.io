@@ -1,0 +1,190 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import BookCard from "@/components/bookshelf/BookCard.astro";
+import { books } from "@/data/books.mjs";
+
+const recentBooks = books.slice(0, 4);
+const favoriteBooks = books.filter((book) => book.favorite);
+const categories = ["Fiction", "Non-fiction", "Technical / Research", "Other"]
+    .map((name) => ({
+        name,
+        books: books.filter((book) => book.category === name),
+    }))
+    .filter((category) => category.books.length > 0);
+---
+
+<BaseLayout
+    title="Bookshelf — Daiki Okayama"
+    description="小説や技術書など、これまでに読んだ本。"
+    canonicalPath="/bookshelf/"
+>
+    <section class="pt-28 lg:pt-36">
+        <Wrapper variant="standard">
+            <div
+                class="grid grid-cols-1 gap-8 border-b border-base-200 pb-12 dark:border-base-800 lg:grid-cols-4 lg:pb-20"
+            >
+                <p
+                    class="text-sm leading-relaxed text-base-500 dark:text-base-400 lg:col-start-2"
+                >
+                    Archive<br />Books I’ve read
+                </p>
+                <div class="lg:col-span-2">
+                    <h1
+                        class="text-5xl font-semibold leading-none tracking-[-0.065em] text-base-900 dark:text-white sm:text-7xl lg:text-8xl"
+                    >
+                        Bookshelf
+                    </h1>
+                    <p
+                        class="mt-6 max-w-lg text-sm leading-relaxed text-base-600 dark:text-base-300 sm:text-base"
+                    >
+                        読んだ本。
+                    </p>
+                </div>
+            </div>
+        </Wrapper>
+    </section>
+
+    {
+        favoriteBooks.length > 0 && (
+            <section aria-labelledby="favorites-title">
+                <Wrapper variant="standard" class="py-12 lg:py-20">
+                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-4">
+                        <div class="lg:col-start-2">
+                            <p class="text-xs uppercase tracking-[0.16em] text-accent-700 dark:text-accent-400">
+                                Selected
+                            </p>
+                            <h2
+                                id="favorites-title"
+                                class="mt-2 text-xl font-semibold tracking-tight text-base-900 dark:text-white"
+                            >
+                                Favorites
+                            </h2>
+                        </div>
+                        <ol class="grid grid-cols-2 gap-x-5 gap-y-12 sm:grid-cols-3 lg:col-span-2 lg:gap-x-7">
+                            {favoriteBooks.map((book, index) => (
+                                <li>
+                                    <BookCard
+                                        {book}
+                                        {index}
+                                        priority={index < 3}
+                                    />
+                                </li>
+                            ))}
+                        </ol>
+                    </div>
+                </Wrapper>
+            </section>
+        )
+    }
+
+    <section aria-labelledby="recent-title">
+        <Wrapper variant="standard" class="py-12 lg:py-20">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-4">
+                <div class="lg:col-start-2">
+                    <p
+                        class="text-xs uppercase tracking-[0.16em] text-base-500 dark:text-base-400"
+                    >
+                        Latest additions
+                    </p>
+                    <h2
+                        id="recent-title"
+                        class="mt-2 text-xl font-semibold tracking-tight text-base-900 dark:text-white"
+                    >
+                        Recently Read
+                    </h2>
+                </div>
+                <ol
+                    class="grid grid-cols-2 gap-x-5 gap-y-12 sm:grid-cols-4 lg:col-span-2 lg:gap-x-6"
+                >
+                    {
+                        recentBooks.map((book, index) => (
+                            <li>
+                                <BookCard
+                                    {book}
+                                    index={books.indexOf(book)}
+                                    priority={index < 4}
+                                />
+                            </li>
+                        ))
+                    }
+                </ol>
+            </div>
+        </Wrapper>
+    </section>
+
+    <section
+        aria-labelledby="collection-title"
+        class="border-t border-base-100 dark:border-base-900"
+    >
+        <Wrapper variant="standard" class="py-12 lg:py-20">
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-4">
+                <div class="lg:sticky lg:top-24 lg:col-start-2 lg:self-start">
+                    <p
+                        class="text-xs uppercase tracking-[0.16em] text-base-500 dark:text-base-400"
+                    >
+                        All books
+                    </p>
+                    <h2
+                        id="collection-title"
+                        class="mt-2 text-xl font-semibold tracking-tight text-base-900 dark:text-white"
+                    >
+                        The shelf
+                    </h2>
+                </div>
+
+                <div class="space-y-20 lg:col-span-2">
+                    {
+                        categories.map((category) => {
+                            const categoryId = `category-${category.name.replaceAll(" ", "-").replaceAll("/", "-").toLowerCase()}`;
+                            return (
+                                <section aria-labelledby={categoryId}>
+                                    <div class="mb-7 flex items-baseline justify-between border-b border-base-200 pb-4 dark:border-base-800">
+                                        <h3
+                                            id={categoryId}
+                                            class="text-sm font-semibold text-base-900 dark:text-white"
+                                        >
+                                            {category.name}
+                                        </h3>
+                                        <span class="text-[0.65rem] tabular-nums text-base-400 dark:text-base-500">
+                                            {String(
+                                                category.books.length,
+                                            ).padStart(2, "0")}
+                                        </span>
+                                    </div>
+                                    <ol class="grid grid-cols-2 gap-x-5 gap-y-12 sm:grid-cols-3 lg:gap-x-7 lg:gap-y-16">
+                                        {category.books.map((book) => {
+                                            const index = books.indexOf(book);
+                                            return (
+                                                <li>
+                                                    <BookCard {book} {index} />
+                                                </li>
+                                            );
+                                        })}
+                                    </ol>
+                                </section>
+                            );
+                        })
+                    }
+                </div>
+            </div>
+        </Wrapper>
+    </section>
+
+    <script>
+        document
+            .querySelectorAll<HTMLImageElement>("[data-book-cover]")
+            .forEach((image) => {
+                const hideMissingCover = () => {
+                    image.hidden = true;
+                };
+
+                if (image.complete && image.naturalWidth === 0)
+                    hideMissingCover();
+                else
+                    image.addEventListener("error", hideMissingCover, {
+                        once: true,
+                    });
+            });
+    </script>
+</BaseLayout>

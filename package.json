@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "sync:book-covers": "node scripts/sync-book-covers.mjs",
+    "refresh:book-covers": "node scripts/sync-book-covers.mjs --refresh",
+    "dev": "npm run sync:book-covers && astro dev",
+    "start": "npm run dev",
+    "build": "npm run sync:book-covers && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
