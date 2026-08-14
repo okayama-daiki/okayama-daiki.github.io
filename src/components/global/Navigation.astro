@@ -14,7 +14,7 @@ const links = [
 
 <nav class="fixed top-0 z-10 w-full border-b border-base-100/80 bg-white/95 backdrop-blur dark:border-base-800 dark:bg-base-950/95">
   <Wrapper variant="standard" class="py-3">
-    <div class="grid grid-cols-2 items-start gap-4 lg:grid-cols-4">
+    <div class="grid grid-cols-[1fr_auto] items-center gap-4 sm:grid-cols-[auto_1fr_auto] lg:grid-cols-4">
       <a href="/" class="flex" aria-label="Home">
         <Logo class="text-xs font-semibold tracking-tight text-base-900 dark:text-white" />
       </a>
@@ -28,13 +28,81 @@ const links = [
           </a>
         ))}
       </div>
-      <a
-        href="/cv.pdf"
-        download
-        class="ml-auto text-xs tracking-tight text-base-600 transition-colors hover:text-base-900 dark:text-base-300 dark:hover:text-white"
-      >
-        Download CV
-      </a>
+      <div class="ml-auto flex items-center gap-4">
+        <a
+          href="/cv.pdf"
+          download
+          class="whitespace-nowrap text-xs tracking-tight text-base-600 transition-colors hover:text-base-900 dark:text-base-300 dark:hover:text-white"
+        >
+          Download CV
+        </a>
+        <button
+          type="button"
+          class="flex size-8 items-center justify-center text-base-600 transition-colors hover:text-base-900 dark:text-base-300 dark:hover:text-white lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+          aria-label="Open navigation"
+          data-menu-button
+        >
+          <svg data-menu-open aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg data-menu-close aria-hidden="true" viewBox="0 0 24 24" class="hidden size-5 fill-none" stroke="currentColor" stroke-width="1.5">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
     </div>
   </Wrapper>
+
+  <div id="mobile-navigation" class="hidden border-t border-base-100/80 dark:border-base-800 lg:hidden" data-mobile-menu>
+    <Wrapper variant="standard" class="py-3">
+      <div class="grid grid-cols-2 gap-x-6 gap-y-1 sm:grid-cols-3">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            class="py-2 text-sm tracking-tight text-base-600 transition-colors hover:text-base-900 dark:text-base-300 dark:hover:text-white"
+          >
+            {link.text}
+          </a>
+        ))}
+      </div>
+    </Wrapper>
+  </div>
 </nav>
+
+<script>
+  const menuButton = document.querySelector<HTMLButtonElement>("[data-menu-button]");
+  const mobileMenu = document.querySelector<HTMLElement>("[data-mobile-menu]");
+  const openIcon = menuButton?.querySelector<SVGElement>("[data-menu-open]");
+  const closeIcon = menuButton?.querySelector<SVGElement>("[data-menu-close]");
+
+  if (menuButton && mobileMenu && openIcon && closeIcon) {
+    const setMenuOpen = (open: boolean) => {
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      mobileMenu.classList.toggle("hidden", !open);
+      openIcon.classList.toggle("hidden", open);
+      closeIcon.classList.toggle("hidden", !open);
+    };
+
+    menuButton.addEventListener("click", () => {
+      setMenuOpen(menuButton.getAttribute("aria-expanded") !== "true");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+        setMenuOpen(false);
+        menuButton.focus();
+      }
+    });
+
+    window.matchMedia("(min-width: 1024px)").addEventListener("change", (event) => {
+      if (event.matches) setMenuOpen(false);
+    });
+  }
+</script>
