@@ -1,6 +1,7 @@
 // 新しく読んだ本は配列の先頭に追加します。
 // favorite と note は、付けたい本にだけ追加すれば大丈夫です。
 export const books = [
+    { title: "口に関するアンケート", author: "背筋", isbn: "9784591182253", category: "Fiction" },
     { title: "さよならドビュッシー", author: "中山七里", isbn: "9784796675307", category: "Fiction" },
     { title: "方舟", author: "夕木春央", isbn: "9784065358542", category: "Fiction" },
     { title: "同志少女よ、敵を撃て", author: "逢坂冬馬", isbn: "9784152100641", category: "Fiction" },
