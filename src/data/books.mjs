@@ -1,6 +1,7 @@
 // 新しく読んだ本は配列の先頭に追加します。
 // favorite と note は、付けたい本にだけ追加すれば大丈夫です。
 export const books = [
+    { title: "マチネの終わりに", author: "平野啓一郎", isbn: "9784167912901", category: "Fiction", favorite: true },
     { title: "口に関するアンケート", author: "背筋", isbn: "9784591182253", category: "Fiction" },
     { title: "さよならドビュッシー", author: "中山七里", isbn: "9784796675307", category: "Fiction" },
     { title: "方舟", author: "夕木春央", isbn: "9784065358542", category: "Fiction" },
@@ -11,7 +12,7 @@ export const books = [
     { title: "病に至る恋", author: "斜線堂有紀", isbn: "9784049166262", category: "Fiction" },
     { title: "傲慢と善良", author: "辻村深月", isbn: "9784022650597", category: "Fiction" },
     { title: "プロジェクト・ヘイル・メアリー 下", author: "アンディ・ウィアー", isbn: "9784152100719", category: "Fiction", favorite: true },
-    { title: "プロジェクト・ヘイル・メアリー 上", author: "アンディ・ウィアー", isbn: "9784152100702", category: "Fiction", favorite: true },
+    { title: "プロジェクト・ヘイル・メアリー 上", author: "アンディ・ウィアー", isbn: "9784152100702", category: "Fiction" },
     { title: "地面師たち ファイナル・ベッツ", author: "新庄耕", isbn: "9784087718737", category: "Fiction" },
     { title: "地面師たち アノニマス", author: "新庄耕", isbn: "9784087447132", category: "Fiction" },
     { title: "地面師たち", author: "新庄耕", isbn: "9784087443387", category: "Fiction" },
