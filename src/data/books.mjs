@@ -1,6 +1,7 @@
 // 新しく読んだ本は配列の先頭に追加します。
 // favorite と note は、付けたい本にだけ追加すれば大丈夫です。
 export const books = [
+    { title: "アリアドネの声", author: "井上真偽", isbn: "9784344434950", category: "Fiction", note: "無理からできそうに、できそうからできるに。自分にできることを見つければいい。" },
     { title: "看守の流儀", author: "城山真一", isbn: "9784299025265", category: "Fiction" },
     { title: "六人の嘘つきな大学生", author: "浅倉秋成", isbn: "9784041134016", category: "Fiction" },
     { title: "運転者", author: "喜多川泰", isbn: "9784799324509", category: "Fiction" },
