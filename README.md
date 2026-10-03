@@ -19,7 +19,22 @@ The static site is generated in `dist/` and deployed to GitHub Pages by the work
 
 ## Adding a book
 
-Add one entry to `src/data/books.mjs`. The build downloads and stores its cover
+The project skill in `.agents/skills/bookshelf-update/` handles title/ISBN lookup,
+comments, validation, and publishing. Invoke it in Codex with `$bookshelf-update`
+and the titles you have read. It belongs to this repository and uses relative paths.
+
+Use the helper to prepend a book to `src/data/books.mjs`:
+
+```sh
+npm run add:book -- --title '本のタイトル' --author '著者名' --isbn '9784344434950' --note '短い感想'
+```
+
+The ISBN must be a valid ISBN-13. `--note` and `--favorite` are optional;
+`--category` defaults to `Fiction`. Use `--dry-run` to preview without editing.
+An ISBN already in the list is skipped; a duplicate title and author with a
+different ISBN is rejected so another edition is not accidentally added.
+
+You can also add an entry manually. The build downloads and stores its cover
 automatically using the ISBN, so no manual image work is needed and visitors do
 not make requests to the cover provider.
 
@@ -36,3 +51,6 @@ If no cover is available, the page shows a typographic fallback. Existing
 covers are cached locally; run `npm run refresh:book-covers` to refresh them.
 Use `Non-fiction`, `Technical / Research`, or `Other` for other categories.
 Add `favorite: true` or `note: "短い感想"` only when you want to show them.
+
+After adding books, run `npm run build`, review the diff, and commit/push the
+book data to publish. The `Build and deploy` workflow handles GitHub Pages.

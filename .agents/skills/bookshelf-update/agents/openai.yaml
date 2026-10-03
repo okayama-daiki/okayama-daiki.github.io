@@ -1,0 +1,3 @@
+interface:
+  display_name: "Bookshelf 更新"
+  short_description: "読了した本とコメントを追加し、ビルド・コミット・公開まで進める"

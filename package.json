@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "add:book": "node scripts/add-book.mjs",
     "sync:book-covers": "node scripts/sync-book-covers.mjs",
     "refresh:book-covers": "node scripts/sync-book-covers.mjs --refresh",
     "dev": "npm run sync:book-covers && astro dev",
