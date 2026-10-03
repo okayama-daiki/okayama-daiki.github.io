@@ -1,11 +1,11 @@
 // 新しく読んだ本は配列の先頭に追加します。
 // favorite と note は、付けたい本にだけ追加すれば大丈夫です。
 export const books = [
-    { title: "恋とか愛とかやさしさなら", author: "一穂ミチ", isbn: "9784093867399", category: "Fiction" },
-    { title: "殺人依存症", author: "櫛木理宇", isbn: "9784344430259", category: "Fiction" },
-    { title: "残酷依存症", author: "櫛木理宇", isbn: "9784344431843", category: "Fiction" },
-    { title: "汝、星のごとく", author: "凪良ゆう", isbn: "9784065401880", category: "Fiction" },
     { title: "星を編む", author: "凪良ゆう", isbn: "9784065443118", category: "Fiction" },
+    { title: "汝、星のごとく", author: "凪良ゆう", isbn: "9784065401880", category: "Fiction" },
+    { title: "残酷依存症", author: "櫛木理宇", isbn: "9784344431843", category: "Fiction" },
+    { title: "殺人依存症", author: "櫛木理宇", isbn: "9784344430259", category: "Fiction" },
+    { title: "恋とか愛とかやさしさなら", author: "一穂ミチ", isbn: "9784093867399", category: "Fiction" },
     { title: "アリアドネの声", author: "井上真偽", isbn: "9784344434950", category: "Fiction", note: "無理からできそうに、できそうからできるに。自分にできることを見つければいい。" },
     { title: "看守の流儀", author: "城山真一", isbn: "9784299025265", category: "Fiction" },
     { title: "六人の嘘つきな大学生", author: "浅倉秋成", isbn: "9784041134016", category: "Fiction" },
