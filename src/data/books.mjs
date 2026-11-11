@@ -1,6 +1,7 @@
 // 新しく読んだ本は配列の先頭に追加します。
 // favorite と note は、付けたい本にだけ追加すれば大丈夫です。
 export const books = [
+    { title: "護られなかった者たちへ", author: "中山七里", isbn: "9784299006332", category: "Fiction" },
     { title: "世界の終りとハードボイルド・ワンダーランド〔下〕", author: "村上春樹", isbn: "9784101001586", category: "Fiction" },
     { title: "世界の終りとハードボイルド・ワンダーランド〔上〕", author: "村上春樹", isbn: "9784101001579", category: "Fiction" },
     { title: "監禁依存症", author: "櫛木理宇", isbn: "9784344433212", category: "Fiction" },
